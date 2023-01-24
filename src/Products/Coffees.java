@@ -9,21 +9,13 @@ public class Coffees {
     private double price;
 
     private static final ArrayList<Coffees> coffeesList = new ArrayList<>(Arrays.asList(
-<<<<<<< HEAD
+
             new Coffees("Black Coffee", 8.90),
             new Coffees("Coffee with milk", 9.70),
-=======
-            new Coffees("Kawa Czarna", 8.90),
-            new Coffees("Kawa z Mlekiem", 9.70),
->>>>>>> origin/main
             new Coffees("Flat White", 12.40),
             new Coffees("Caffe Latte", 12.40),
             new Coffees("Iced Latte", 14.40),
-            new Coffees("Iced Carmel Latte", 15.30),
-<<<<<<< HEAD
-=======
-            new Coffees("Kawa Czarna", 8.90),
->>>>>>> origin/main
+            new Coffees("Iced Caramel Latte", 15.30),
             new Coffees("Carmel Latte Macchiato", 16.60)));
 
     public Coffees(String name, double price) {

@@ -10,23 +10,23 @@ public class Desserts {
 
     private static final ArrayList<Desserts> dessertsList = new ArrayList<>(Arrays.asList(
 
-       new Desserts("Ciastko mango-marakuja", 7.90),
-       new Desserts("Ciastko jabłkowe", 7.90),
-       new Desserts("Muffin z truskawkami i białą czekoladą", 7.70),
-       new Desserts("Muffin z czekoladą", 7.70),
-       new Desserts("Zawijas z nugatem", 7.70),
-       new Desserts("Croassant maślany", 6.60),
-       new Desserts("Croassant kakaowy", 7.70),
-       new Desserts("Ciastko słony karmel", 6.60),
-       new Desserts("Ciastko owsiane", 6.60),
-       new Desserts("Ciastko z kawałkami czekolady", 6.60),
-       new Desserts("Lody śmietankowe z polewą czekoldową", 9.90),
-       new Desserts("Lody śmietankowe z polewą truskawkową", 9.90),
-       new Desserts("Lody śmietankowe z polewą karmelową", 9.90),
-       new Desserts("Lody czekoladowe z polewą czekoldową", 9.90),
-       new Desserts("Lody czekoladowe z polewą truskawkową", 9.90),
-       new Desserts("Lody czekoladowe z polewą karmelową", 9.90),
-       new Desserts("McFlurry śmietankowe z posypką Lion", 11.50)));
+            new Desserts("Mango-passion fruit cake", 7.90),
+            new Desserts("Apple Cake", 7.90),
+            new Desserts("Strawberry White Chocolate Muffin", 7.70),
+            new Desserts("Chocolate Muffin", 7.70),
+            new Desserts("Nougat Swirl", 7.70),
+            new Desserts("Butter Croassant", 6.60),
+            new Desserts("Cocoa Croassant", 7.70),
+            new Desserts("Salted Caramel Cookie", 6.60),
+            new Desserts("Oatcake", 6.60),
+            new Desserts("Chocolate chip cookie", 6.60),
+            new Desserts("Chocolate ice Cream", 9.90),
+            new Desserts("Strawberry ice cream", 9.90),
+            new Desserts("Caramel cream ice Cream", 9.90),
+            new Desserts("Chocolate ice cream with chocolate topping", 9.90),
+            new Desserts("Chocolate ice Cream with strawberry topping", 9.90),
+            new Desserts("Chocolate ice cream with caramel coating", 9.90),
+            new Desserts("Cream McFlurry with Lion sprinkles", 11.50)));
 
     public Desserts(String name, double price) {
         this.name = name;

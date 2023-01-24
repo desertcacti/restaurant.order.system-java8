@@ -9,16 +9,16 @@ public class Extras {
     private double price;
 
     private static final ArrayList<Extras> extrasList = new ArrayList<>(Arrays.asList(
-            new Extras("Oliwa z oliwek", 1.50),
+            new Extras("Olive oil", 1.50),
             new Extras("Ketchup", 1.50),
-            new Extras("Sos koperkowy", 2.00),
-            new Extras("Sos 1000 wysp", 2.00),
-            new Extras("Sos Vinegret", 2.00),
-            new Extras("Sos słodko-kwaśny", 2.00),
-            new Extras("Sos Barbeque", 2.00),
-            new Extras("Sos Musztardowy", 2.00),
-            new Extras("Sos śmietanowy", 2.00),
-            new Extras("Sos czosnkowy", 2.00)));
+            new Extras("Garlic sauce", 2.00),
+            new Extras("1000 Island sauce", 2.00),
+            new Extras("Mustard sauce", 2.00),
+            new Extras("Barbeque sauce", 2.00),
+            new Extras("Sweet and sour sauce", 2.00),
+            new Extras("Cream sauce", 2.00),
+            new Extras("Dill sauce", 2.00),
+            new Extras("Vinaigrette sauce", 2.00)));
 
     public Extras(String name, double price) {
         this.name = name;
