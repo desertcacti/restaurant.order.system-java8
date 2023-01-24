@@ -10,23 +10,23 @@ public class Desserts {
 
     private static final ArrayList<Desserts> dessertsList = new ArrayList<>(Arrays.asList(
 
-       new Desserts("Mango-passion fruit cake", 7.90),
-       new Desserts("Apple cake", 7.90),
-       new Desserts("Muffin with strawberries and white chocolate", 7.70),
-       new Desserts("Muffin with chocolate", 7.70),
-       new Desserts("Swirl with nougat", 7.70),
-       new Desserts("Butter croissant", 6.60),
-       new Desserts("Cocoa croissant", 7.70),
-       new Desserts("Salted caramel cookie", 6.60),
-       new Desserts("Oat cookie", 6.60),
-       new Desserts("Cookie with chocolate pieces", 6.60),
-       new Desserts("Cream ice cream with chocolate topping", 9.90),
-       new Desserts("Cream ice cream with strawberry topping", 9.90),
-       new Desserts("Cream ice cream with caramel topping", 9.90),
-       new Desserts("Chocolate ice cream with chocolate topping", 9.90),
-       new Desserts("Chocolate ice cream with strawberry topping", 9.90),
-       new Desserts("Chocolate ice cream with caramel topping", 9.90),
-       new Desserts("Cream McFlurry with Lion sprinkles", 11.50)));
+       new Desserts("Ciastko mango-marakuja", 7.90),
+       new Desserts("Ciastko jabłkowe", 7.90),
+       new Desserts("Muffin z truskawkami i białą czekoladą", 7.70),
+       new Desserts("Muffin z czekoladą", 7.70),
+       new Desserts("Zawijas z nugatem", 7.70),
+       new Desserts("Croassant maślany", 6.60),
+       new Desserts("Croassant kakaowy", 7.70),
+       new Desserts("Ciastko słony karmel", 6.60),
+       new Desserts("Ciastko owsiane", 6.60),
+       new Desserts("Ciastko z kawałkami czekolady", 6.60),
+       new Desserts("Lody śmietankowe z polewą czekoldową", 9.90),
+       new Desserts("Lody śmietankowe z polewą truskawkową", 9.90),
+       new Desserts("Lody śmietankowe z polewą karmelową", 9.90),
+       new Desserts("Lody czekoladowe z polewą czekoldową", 9.90),
+       new Desserts("Lody czekoladowe z polewą truskawkową", 9.90),
+       new Desserts("Lody czekoladowe z polewą karmelową", 9.90),
+       new Desserts("McFlurry śmietankowe z posypką Lion", 11.50)));
 
     public Desserts(String name, double price) {
         this.name = name;
@@ -44,17 +44,15 @@ public class Desserts {
 
     @Override
     public String toString () {
+
         return name +
+
                 " - " +
+
                 String.format("%.2f", price)
+
                 + " PLN"
                 ;
+
     }
-
-
-
-
-
-
-
 }
