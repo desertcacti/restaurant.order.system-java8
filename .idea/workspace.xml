@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="New Project Started">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Products/Burger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Products/Frytki.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Products/Nuggets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Products/Wraps.java" afterDir="false" />
+    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Adding products and prototype of operating_system_view">
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Menu_Display.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Printer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operating_System/SystemStart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartApp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Operation_System_View/FinalizationOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Operation_System_View/displayView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Burger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Coffee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Coffees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Desery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Desserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Dodatki.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Extras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Drinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Drinks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Frytki.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Fries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Nuggets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Nuggets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Wraps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Wraps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StartApp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartApp/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -36,14 +45,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/dredz/OneDrive/Pulpit/projekty_nnn/RestaurantOrderSystem v1.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dredz/OneDrive/Pulpit/projekty_nnn/RestaurantOrderSystem v1.0&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674505759077</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding products and prototype of operating_system_view">
+      <created>1674506592270</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674506592270</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,7 +92,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Project Started" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Project Started" />
+    <MESSAGE value="Adding products and prototype of operating_system_view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding products and prototype of operating_system_view" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
