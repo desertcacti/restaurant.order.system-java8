@@ -1,5 +1,7 @@
 package Products;
 
+import Functional_Interfaces.Printer;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -7,7 +9,7 @@ import java.util.Scanner;
 public class Wraps {
     private String name;
     private double price;
-    private static final ArrayList<Wraps> wraps = new ArrayList<>(Arrays.asList(
+    private static final ArrayList<Wraps> wrapsList = new ArrayList<>(Arrays.asList(
             new Wraps("McWrap Veggie", 18.60),
             new Wraps("McWrap Crispy Classic", 19.90),
             new Wraps("McWrap Crispy Bacon Deluxe", 20.50),
@@ -40,6 +42,19 @@ public class Wraps {
 
 
     }
+
+
+    public static void displayWrapsList() {Printer.productListPrinter(wrapsList);}
+
+
+
+
+
+
+
+
+
+
 }
 
 

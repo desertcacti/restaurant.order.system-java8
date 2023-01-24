@@ -56,8 +56,8 @@ public class Burger implements Printer{
     }
 
 
-  public static void printBurgerList() {
-        Printer.print(burgersList);
+  public static void displayBurgerList() {
+        Printer.productListPrinter(burgersList);
     }
 
 

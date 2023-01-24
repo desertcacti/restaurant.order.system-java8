@@ -1,5 +1,7 @@
 package Products;
 
+import Functional_Interfaces.Printer;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -42,7 +44,9 @@ public class Coffees {
     }
 
 
-
+    public static void displayCoffeesList() {
+        Printer.productListPrinter(coffeesList);
+    }
 
 
 

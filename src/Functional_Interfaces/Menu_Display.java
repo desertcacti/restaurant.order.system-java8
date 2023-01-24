@@ -4,19 +4,9 @@ import java.util.Scanner;
 
 
 public interface Menu_Display {
-
-
     static void displayMenu () {
-
-        System.out.println("1.Burgery\n2.Wrap\n3.Frytki\n4.Nuggetsy\n5.Drinks\n6.Coffee\n7.Desery\n8.Dodatki\n9.Exit\n\nEnter choice: ");
-
-
+        System.out.println("1.Burgers\n2.Wraps\n3.Fries\n4.Nuggets\n5.Drinks\n6.Coffee\n7.Desserts\n8.Extras\n9.Exit\n\nEnter choice: ");
     }
-
-
-
-
-
 }
 
 

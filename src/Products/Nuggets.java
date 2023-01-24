@@ -1,5 +1,7 @@
 package Products;
 
+import Functional_Interfaces.Printer;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -38,6 +40,19 @@ public class Nuggets {
 
 
     }
+
+
+    public static void displayNuggetsList() {
+        Printer.productListPrinter(nuggetsList);
+    }
+
+
+
+
+
+
+
+
 }
 
 
