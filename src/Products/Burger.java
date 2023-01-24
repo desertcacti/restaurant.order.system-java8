@@ -11,7 +11,7 @@ public class Burger implements Printer{
     private String name;
     private double price;
 
-    private static final ArrayList<Burger> burgersList = new ArrayList<>(Arrays.asList(
+   public static final ArrayList<Burger> burgersList = new ArrayList<>(Arrays.asList(
             new Burger("Jalapeno Burger", 6.50),
             new Burger("Hamburger", 5.90),
             new Burger("Chikker", 7.50),
@@ -23,10 +23,6 @@ public class Burger implements Printer{
             new Burger( "McRoyal", 19.10),
             new Burger( "Big Mac", 19.40),
             new Burger("Supreme Chicken Sweet & Spicy Burger", 22.70)));
-
-
-    public Burger() {
-    }
 
 
 
@@ -45,6 +41,9 @@ public class Burger implements Printer{
     }
 
 
+
+
+
     @Override
     public String toString() {
 
@@ -57,7 +56,10 @@ public class Burger implements Printer{
 
 
   public static void displayBurgerList() {
+
         Printer.productListPrinter(burgersList);
+        System.out.println("\n12.Back");
+        System.out.println("13.Finalize order");
     }
 
 

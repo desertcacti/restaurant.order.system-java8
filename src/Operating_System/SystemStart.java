@@ -1,11 +1,14 @@
 package Operating_System;
 
+import FinalizationOrder.CartList;
+import Functional_Interfaces.Add_To_Cart.AddBurgerToCart;
 import Functional_Interfaces.Menu_Display;
+import Functional_Interfaces.Add_Generic_Item_To_Cart;
 import Products.*;
 
 import java.util.Scanner;
 
-public class SystemStart implements Menu_Display {
+public class SystemStart implements Menu_Display, Add_Generic_Item_To_Cart {
 
     public static void Start () {
 
@@ -21,8 +24,8 @@ public class SystemStart implements Menu_Display {
 
             case 1:
                 Burger.displayBurgerList();
-
-
+                AddBurgerToCart.addBurgerToCart();
+                CartList.printCartList();
                 break;
 
             case 2:
