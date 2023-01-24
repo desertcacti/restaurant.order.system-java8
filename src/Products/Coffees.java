@@ -4,19 +4,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Nuggets {
+public class Coffees {
     private String name;
     private double price;
 
-    private static final ArrayList<Nuggets> nuggetsList = new ArrayList<>(Arrays.asList(
-            new Nuggets("Six McNuggets", 16.00),
-            new Nuggets("Nine McNuggets", 18.80),
-            new Nuggets("Twenty McNuggets", 30.30),
-            new Nuggets("Three Chicken Tenders", 16.70),
-            new Nuggets("Five Chicken Tenders", 21.30),
-            new Nuggets("ChickenBox", 43.40)));
+    private static final ArrayList<Coffees> coffeesList = new ArrayList<>(Arrays.asList(
+            new Coffees("Black Coffee", 8.90),
+            new Coffees("Coffee with milk", 9.70),
+            new Coffees("Flat White", 12.40),
+            new Coffees("Caffe Latte", 12.40),
+            new Coffees("Iced Latte", 14.40),
+            new Coffees("Iced Carmel Latte", 15.30),
+            new Coffees("Carmel Latte Macchiato", 16.60)));
 
-    public Nuggets(String name, double price) {
+    public Coffees(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -30,14 +31,19 @@ public class Nuggets {
 
     @Override
     public String toString () {
+
         return name +
                 " - " +
                 String.format("%.2f", price)
                 + " PLN"
                 ;
 
-
     }
+
+
+
+
+
+
+
 }
-
-
