@@ -7,6 +7,9 @@ import java.util.stream.Collectors;
 
 public interface Add_Generic_Item_To_Cart<E> {
 
+
+
+
 //
 //    static <E> void addItemToBill(Collection<E> currentArrayList)  {
 //

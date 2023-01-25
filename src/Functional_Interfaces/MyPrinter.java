@@ -2,7 +2,7 @@ package Functional_Interfaces;
 
 import java.util.Collection;
 
-public interface Printer<T> {
+public interface MyPrinter<T> {
 
     static <T> void productListPrinter(Collection<T> array) {
         int i = 1;

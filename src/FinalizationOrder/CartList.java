@@ -1,10 +1,11 @@
 package FinalizationOrder;
 
-import Functional_Interfaces.Printer;
+import Functional_Interfaces.MyPrinter;
 
 import java.util.ArrayList;
 
-public class CartList{
+public class CartList {
+
 
     public static ArrayList<Object> cartList = new ArrayList<>();
 
@@ -21,9 +22,9 @@ public class CartList{
 
 
    public static void printCartList() {
-       Printer.productListPrinter(cartList);
-
+       MyPrinter.productListPrinter(cartList);
    }
+
 
 
 

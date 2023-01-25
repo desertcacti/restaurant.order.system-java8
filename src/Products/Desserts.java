@@ -1,16 +1,15 @@
 package Products;
 
-import Functional_Interfaces.Printer;
+import Functional_Interfaces.MyPrinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Desserts {
     private String name;
    private double price;
 
-    private static final ArrayList<Desserts> dessertsList = new ArrayList<>(Arrays.asList(
+    public static final ArrayList<Desserts> dessertsList = new ArrayList<>(Arrays.asList(
 
             new Desserts("Mango-passion fruit cake", 7.90),
             new Desserts("Apple Cake", 7.90),
@@ -59,7 +58,9 @@ public class Desserts {
     }
 
     public static void displayDessertsList() {
-        Printer.productListPrinter(dessertsList);
+        MyPrinter.productListPrinter(dessertsList);
+        System.out.println("\n18.Back");
+        System.out.println("19.Finalize order");
     }
 
 

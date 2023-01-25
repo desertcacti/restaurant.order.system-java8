@@ -2,14 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="First try to implement system funcionality/display/management">
-      <change afterPath="$PROJECT_DIR$/src/FinalizationOrder/CartList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_Generic_Item_To_Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddBurgerToCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/MyScanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FinalizationOrder/Finalization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddCoffeesToCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDessertsToCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDrinksToCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddExtrasToCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddFriesToCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddNuggetsToCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddWrapToCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Farewell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/addItem_toBill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FinalizationOrder/CartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FinalizationOrder/CartList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_Generic_Item_To_Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_Generic_Item_To_Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddBurgerToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddBurgerToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/MyScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/MyScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/MyPrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Operating_System/SystemStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operating_System/SystemStart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Products/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Burger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Coffees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Coffees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Desserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Desserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Drinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Drinks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Extras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Extras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Fries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Fries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Nuggets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Nuggets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Wraps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Wraps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StartApp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartApp/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +63,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/dredz/OneDrive/Pulpit/projekty_nnn/RestaurantOrderSystem v1.0&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.StartApp">
     <configuration name="StartApp" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -57,6 +73,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SystemStart" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Operating_System.SystemStart" />
+      <module name="Restaurant_Order_System_v1.1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.StartApp" />
+      <item itemvalue="Application.SystemStart" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -102,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674594425727</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="First try to implement system funcionality/display/management">
+      <created>1674601526080</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674601526080</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +158,16 @@
     <MESSAGE value="English name of products, before system funcionality" />
     <MESSAGE value="First try to implement system funcionality/display/management" />
     <option name="LAST_COMMIT_MESSAGE" value="First try to implement system funcionality/display/management" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">

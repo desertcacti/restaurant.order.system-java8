@@ -1,86 +1,81 @@
 package Operating_System;
 
 import FinalizationOrder.CartList;
-import Functional_Interfaces.Add_To_Cart.AddBurgerToCart;
+import Functional_Interfaces.Add_To_Cart.*;
+import Functional_Interfaces.Farewell;
 import Functional_Interfaces.Menu_Display;
 import Functional_Interfaces.Add_Generic_Item_To_Cart;
+import Functional_Interfaces.MyScanner;
 import Products.*;
 
 import java.util.Scanner;
 
-public class SystemStart implements Menu_Display, Add_Generic_Item_To_Cart {
+public class SystemStart {
 
-    public static void Start () {
+
+    public static void Start() {
 
         System.out.println("Welcome in McRonald!\n");
 
-        Scanner sc = new Scanner(System.in);
+//        Scanner sc = new Scanner(System.in);
         Menu_Display.displayMenu();
 
-        int choice = sc.nextInt();
+        int choice = MyScanner.myIntScanner();
 
-        switch(choice) {
+        switch (choice) {
 
 
             case 1:
                 Burger.displayBurgerList();
                 AddBurgerToCart.addBurgerToCart();
-                CartList.printCartList();
+
                 break;
 
             case 2:
                 Wraps.displayWrapsList();
-
+                AddWrapToCart.addWrapToCart();
 
                 break;
 
             case 3:
                 Fries.displayFriesList();
-
+                AddFriesToCart.addFriesToCart();
 
                 break;
 
             case 4:
                 Nuggets.displayNuggetsList();
-
+                AddNuggetsToCart.addNuggetsToCart();
                 break;
 
             case 5:
                 Drinks.displayDrinksList();
-
+                AddDrinksToCart.addDrinksToCart();
 
                 break;
 
             case 6:
                 Coffees.displayCoffeesList();
-
+                AddCoffeesToCart.addCoffeesToCart();
 
                 break;
 
             case 7:
-                Desserts.displayDessertsList();
 
+                Desserts.displayDessertsList();
+                AddDessertsToCart.addDessertsToCart();
 
                 break;
 
             case 8:
                 Extras.displayExtrasList();
-
+                AddExtrasToCart.addExtrasToCart();
 
                 break;
 
             case 9:
-                /// implement exit option
-
-
-                break;
+                Farewell.farewell();
+                //trzeba zaimplementować ignoreCase'a
         }
     }
-
-
-
-
-
-
-//end
 }

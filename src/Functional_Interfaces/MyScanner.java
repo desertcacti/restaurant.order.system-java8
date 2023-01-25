@@ -4,12 +4,16 @@ import java.util.Scanner;
 
 public interface MyScanner {
 
-    static int myScanner () {
+    static int myIntScanner() {
         Scanner sc = new Scanner(System.in);
-        return  sc.nextInt();
+        return sc.nextInt();
     }
 
 
+    static String myLineScanner() {
+        Scanner sc = new Scanner(System.in);
+        return sc.nextLine();
 
+    }
 
 }

@@ -4,44 +4,28 @@ import FinalizationOrder.CartList;
 import FinalizationOrder.Finalization;
 import Functional_Interfaces.MyScanner;
 import Operating_System.SystemStart;
-import Products.Burger;
+import Products.Desserts;
+import Products.Drinks;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+public interface AddDrinksToCart {
+    static void addDrinksToCart() {
 
-public interface AddBurgerToCart {
-    static void addBurgerToCart() {
-
-        System.out.println("\nSelect burger you want to add to your order: ");
+        System.out.println("\nSelect drink you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
-        if (scanner < 0 || scanner > 13) {
+        if (scanner < 0 || scanner > 12) {
             System.out.println("Wrong number selected. Please try again");
-            addBurgerToCart();
+            addDrinksToCart();
         } else if (scanner == 11) {
             SystemStart.Start();
         } else if (scanner == 12) {
             Finalization.finalizationOfOrder();
         } else {
-            CartList.cartList.add(Burger.burgersList.get(scanner));
-            System.out.printf("%.2f", Burger.burgersList.get(scanner).getPrice());
+            CartList.cartList.add(Drinks.drinksList.get(scanner));
+            System.out.printf("%.2f", Drinks.drinksList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");
-            addBurgerToCart();
+            addDrinksToCart();
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -1,16 +1,15 @@
 package Products;
 
-import Functional_Interfaces.Printer;
+import Functional_Interfaces.MyPrinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Nuggets {
     private String name;
     private double price;
 
-    private static final ArrayList<Nuggets> nuggetsList = new ArrayList<>(Arrays.asList(
+    public static final ArrayList<Nuggets> nuggetsList = new ArrayList<>(Arrays.asList(
             new Nuggets("Six McNuggets", 16.00),
             new Nuggets("Nine McNuggets", 18.80),
             new Nuggets("Twenty McNuggets", 30.30),
@@ -43,7 +42,9 @@ public class Nuggets {
 
 
     public static void displayNuggetsList() {
-        Printer.productListPrinter(nuggetsList);
+        MyPrinter.productListPrinter(nuggetsList);
+        System.out.println("\n7.Back");
+        System.out.println("8.Finalize order");
     }
 
 

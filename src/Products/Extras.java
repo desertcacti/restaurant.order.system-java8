@@ -1,16 +1,15 @@
 package Products;
 
-import Functional_Interfaces.Printer;
+import Functional_Interfaces.MyPrinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Extras {
     private String name;
     private double price;
 
-    private static final ArrayList<Extras> extrasList = new ArrayList<>(Arrays.asList(
+    public static final ArrayList<Extras> extrasList = new ArrayList<>(Arrays.asList(
             new Extras("Olive oil", 1.50),
             new Extras("Ketchup", 1.50),
             new Extras("Garlic sauce", 2.00),
@@ -43,7 +42,9 @@ public class Extras {
 
 
     public static void displayExtrasList() {
-        Printer.productListPrinter(extrasList);
+        MyPrinter.productListPrinter(extrasList);
+        System.out.println("\n11.Back");
+        System.out.println("12.Finalize order");
     }
 
 

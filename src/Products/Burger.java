@@ -1,13 +1,11 @@
 package Products;
-import Functional_Interfaces.Printer;
+import Functional_Interfaces.MyPrinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
 
 
-public class Burger implements Printer{
+public class Burger implements MyPrinter {
     private String name;
     private double price;
 
@@ -57,7 +55,7 @@ public class Burger implements Printer{
 
   public static void displayBurgerList() {
 
-        Printer.productListPrinter(burgersList);
+        MyPrinter.productListPrinter(burgersList);
         System.out.println("\n12.Back");
         System.out.println("13.Finalize order");
     }
