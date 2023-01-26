@@ -2,9 +2,10 @@ package Functional_Interfaces.Add_To_Cart;
 
 import FinalizationOrder.CartList;
 import FinalizationOrder.Finalization;
-import Functional_Interfaces.MyScanner;
+import Functional_Interfaces.Other.MyScanner;
 import Operating_System.SystemStart;
-import Products.Desserts;
+import Products.Coffees;
+import Products.Fries;
 import Products.Nuggets;
 
 public interface AddNuggetsToCart {
@@ -21,10 +22,12 @@ public interface AddNuggetsToCart {
         } else if (scanner == 7) {
             Finalization.finalizationOfOrder();
         } else {
-            CartList.cartList.add(Nuggets.nuggetsList.get(scanner));
+            CartList.getCartList().add(Nuggets.nuggetsList.get(scanner));
+            CartList.addToCartValue(Nuggets.nuggetsList.get(scanner).getPrice());
             System.out.printf("%.2f", Nuggets.nuggetsList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");
             addNuggetsToCart();
+
         }
     }
 }

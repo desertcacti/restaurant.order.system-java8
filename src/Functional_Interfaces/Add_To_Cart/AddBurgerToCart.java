@@ -2,12 +2,9 @@ package Functional_Interfaces.Add_To_Cart;
 
 import FinalizationOrder.CartList;
 import FinalizationOrder.Finalization;
-import Functional_Interfaces.MyScanner;
+import Functional_Interfaces.Other.MyScanner;
 import Operating_System.SystemStart;
 import Products.Burger;
-
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public interface AddBurgerToCart {
     static void addBurgerToCart() {
@@ -23,10 +20,13 @@ public interface AddBurgerToCart {
         } else if (scanner == 12) {
             Finalization.finalizationOfOrder();
         } else {
-            CartList.cartList.add(Burger.burgersList.get(scanner));
+            CartList.getCartList().add(Burger.burgersList.get(scanner));
+            CartList.addToCartValue(Burger.burgersList.get(scanner).getPrice());
             System.out.printf("%.2f", Burger.burgersList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");
             addBurgerToCart();
+
+
         }
     }
 }

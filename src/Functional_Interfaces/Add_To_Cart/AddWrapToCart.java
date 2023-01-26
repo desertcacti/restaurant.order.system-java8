@@ -2,9 +2,10 @@ package Functional_Interfaces.Add_To_Cart;
 
 import FinalizationOrder.CartList;
 import FinalizationOrder.Finalization;
-import Functional_Interfaces.MyScanner;
+import Functional_Interfaces.Other.MyScanner;
 import Operating_System.SystemStart;
-import Products.Desserts;
+import Products.Coffees;
+import Products.Nuggets;
 import Products.Wraps;
 
 public interface AddWrapToCart {
@@ -22,10 +23,12 @@ public interface AddWrapToCart {
         } else if (scanner == 5) {
             Finalization.finalizationOfOrder();
         } else {
-            CartList.cartList.add(Wraps.wrapsList.get(scanner));
+            CartList.getCartList().add(Wraps.wrapsList.get(scanner));
+            CartList.addToCartValue(Wraps.wrapsList.get(scanner).getPrice());
             System.out.printf("%.2f", Wraps.wrapsList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");
             addWrapToCart();
+
         }
     }
 }

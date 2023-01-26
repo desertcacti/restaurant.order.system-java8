@@ -1,14 +1,10 @@
 package Operating_System;
 
-import FinalizationOrder.CartList;
 import Functional_Interfaces.Add_To_Cart.*;
-import Functional_Interfaces.Farewell;
-import Functional_Interfaces.Menu_Display;
-import Functional_Interfaces.Add_Generic_Item_To_Cart;
-import Functional_Interfaces.MyScanner;
+import Functional_Interfaces.Other.Farewell;
+import Functional_Interfaces.Other.Menu_Display;
+import Functional_Interfaces.Other.MyScanner;
 import Products.*;
-
-import java.util.Scanner;
 
 public class SystemStart {
 

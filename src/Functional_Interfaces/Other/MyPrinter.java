@@ -1,4 +1,4 @@
-package Functional_Interfaces;
+package Functional_Interfaces.Other;
 
 import java.util.Collection;
 
@@ -11,10 +11,6 @@ public interface MyPrinter<T> {
             i++;
                 }
             }
-
-
-
-
     }
 
 

@@ -2,7 +2,7 @@ package Functional_Interfaces.Add_To_Cart;
 
 import FinalizationOrder.CartList;
 import FinalizationOrder.Finalization;
-import Functional_Interfaces.MyScanner;
+import Functional_Interfaces.Other.MyScanner;
 import Operating_System.SystemStart;
 import Products.Coffees;
 import Products.Desserts;
@@ -21,10 +21,12 @@ public interface AddDessertsToCart {
         } else if (scanner == 18) {
             Finalization.finalizationOfOrder();
         } else {
-            CartList.cartList.add(Desserts.dessertsList.get(scanner));
+            CartList.getCartList().add(Desserts.dessertsList.get(scanner));
+            CartList.addToCartValue(Desserts.dessertsList.get(scanner).getPrice());
             System.out.printf("%.2f", Desserts.dessertsList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");
             addDessertsToCart();
+
         }
     }
 }
