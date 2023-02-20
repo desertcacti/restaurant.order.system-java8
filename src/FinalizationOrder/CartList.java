@@ -5,12 +5,17 @@ import java.util.*;
 public class CartList {
 
     private static ArrayList<Object> cartList = new ArrayList<>();
+
+    private static Map<Object, Integer> cartLinkedHashMap = new LinkedHashMap<>();
     private static double cartValue = 00.00;
+
+
 
     public static void printCartList() {
 
-        Map<Object, Integer> cartListToMap = new HashMap<>();
+        Map<Object, Integer> cartListToMap = new LinkedHashMap<>();
 
+        //ADDING TO LINKEDHASHMAP
         for (Object obj : cartList) {
             if (cartListToMap.containsKey(obj)) {
                 cartListToMap.put(obj, cartListToMap.get(obj) + 1);
@@ -19,10 +24,21 @@ public class CartList {
             }
         }
 
+        // PRINTING
+        int i = 1; // incrementation display
         for (Map.Entry<Object, Integer> entry : cartListToMap.entrySet()) {
-            System.out.println(entry.getValue() + " x " + entry.getKey());
 
+            System.out.print(i + ". "); // incrementation display
+            System.out.println(entry.getValue() + " x " + entry.getKey());
+            i++; // incrementation display
         }
+    }
+
+
+    public static void addToLinkedHashMapCart() {
+
+
+
     }
 
 

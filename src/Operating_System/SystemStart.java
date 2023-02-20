@@ -13,13 +13,10 @@ public class SystemStart {
 
         System.out.println("Welcome in McRonald!\n");
 
-//        Scanner sc = new Scanner(System.in);
         Menu_Display.displayMenu();
-
         int choice = MyScanner.myIntScanner();
 
         switch (choice) {
-
 
             case 1:
                 Burger.displayBurgerList();
@@ -72,6 +69,10 @@ public class SystemStart {
             case 9:
                 Farewell.farewell();
                 //trzeba zaimplementować ignoreCase'a
+
+            default:
+               Start();
+               break;
         }
     }
 }

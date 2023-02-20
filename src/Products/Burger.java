@@ -17,7 +17,7 @@ public class Burger implements MyPrinter {
             new Burger("McDouble", 9.90),
             new Burger("McChicken", 16.70),
             new Burger("Veggie Burger", 18.60),
-            new Burger("Wieśmak", 19.10),
+            new Burger("Wieśniak", 19.10),
             new Burger( "McRoyal", 19.10),
             new Burger( "Big Mac", 19.40),
             new Burger("Supreme Chicken Sweet & Spicy Burger", 22.70)));

@@ -22,6 +22,7 @@ public interface AddDrinksToCart {
         } else if (scanner == 12) {
             Finalization.finalizationOfOrder();
         } else {
+
             CartList.getCartList().add(Drinks.drinksList.get(scanner));
             CartList.addToCartValue(Drinks.drinksList.get(scanner).getPrice());
             System.out.printf("%.2f", Drinks.drinksList.get(scanner).getPrice());

@@ -13,12 +13,12 @@ public interface AddDessertsToCart {
         System.out.println("\nSelect dessert you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
-        if (scanner < 0 || scanner > 18) {
+        if (scanner < 0 || scanner > 29) {
             System.out.println("Wrong number selected. Please try again");
             addDessertsToCart();
-        } else if (scanner == 17) {
+        } else if (scanner == 28) {
             SystemStart.Start();
-        } else if (scanner == 18) {
+        } else if (scanner == 29) {
             Finalization.finalizationOfOrder();
         } else {
             CartList.getCartList().add(Desserts.dessertsList.get(scanner));

@@ -1,33 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="AddItemToCart implemented">
-      <change afterPath="$PROJECT_DIR$/src/Test/Test.java" afterDir="false" />
+    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Added sorting and display to Cart/Finalization">
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Customization/BurgerCustomization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Other/Customization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Products/Additions/CoffeesAdditions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Products/Additions/DessertsAdditions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Products/Additions/DrinksAdditions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Products/Additions/WrapsAdditions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FinalizationOrder/CartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FinalizationOrder/CartList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FinalizationOrder/Finalization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FinalizationOrder/Finalization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_Generic_Item_To_Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Other/Add_Generic_Item_To_Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddBurgerToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddBurgerToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddCoffeesToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddCoffeesToCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDessertsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDessertsToCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDrinksToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDrinksToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddExtrasToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddExtrasToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddFriesToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddFriesToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddNuggetsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddNuggetsToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddWrapToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddWrapToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Farewell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Other/Farewell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Menu_Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Other/Menu_Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/MyPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Other/MyPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/MyScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Other/MyScanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Operating_System/SystemStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operating_System/SystemStart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Products/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Burger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Products/Coffees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Coffees.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Products/Desserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Desserts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Products/Drinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Drinks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Products/Extras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Extras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Products/Fries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Fries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Products/Nuggets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Nuggets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Products/Wraps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Wraps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674650439610</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added sorting and display to Cart/Finalization">
+      <created>1674759865181</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674759865181</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,7 +162,8 @@
     <MESSAGE value="English name of products, before system funcionality" />
     <MESSAGE value="First try to implement system funcionality/display/management" />
     <MESSAGE value="AddItemToCart implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="AddItemToCart implemented" />
+    <MESSAGE value="Added sorting and display to Cart/Finalization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sorting and display to Cart/Finalization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -174,6 +171,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
