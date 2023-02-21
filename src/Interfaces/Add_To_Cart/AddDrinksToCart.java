@@ -1,11 +1,10 @@
-package Functional_Interfaces.Add_To_Cart;
+package Interfaces.Add_To_Cart;
 
+import Customization.DrinksCustomization;
 import FinalizationOrder.CartList;
 import FinalizationOrder.Finalization;
-import Functional_Interfaces.Other.MyScanner;
+import Interfaces.Other.MyScanner;
 import Operating_System.SystemStart;
-import Products.Coffees;
-import Products.Desserts;
 import Products.Drinks;
 
 public interface AddDrinksToCart {
@@ -27,7 +26,7 @@ public interface AddDrinksToCart {
             CartList.addToCartValue(Drinks.drinksList.get(scanner).getPrice());
             System.out.printf("%.2f", Drinks.drinksList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");
-            addDrinksToCart();
+            DrinksCustomization.drinksCustomization();
 
         }
     }

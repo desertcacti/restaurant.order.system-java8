@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Added sorting and display to Cart/Finalization">
-      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Customization/BurgerCustomization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Other/Customization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Products/Additions/CoffeesAdditions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Products/Additions/DessertsAdditions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Products/Additions/DrinksAdditions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Products/Additions/WrapsAdditions.java" afterDir="false" />
+    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Added customization method to burger.">
+      <change afterPath="$PROJECT_DIR$/TeT/todo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FinalizationOrder/CartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FinalizationOrder/CartList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FinalizationOrder/Finalization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FinalizationOrder/Finalization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddBurgerToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddBurgerToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDessertsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDessertsToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDrinksToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDrinksToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddBurgerToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddBurgerToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddCoffeesToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddCoffeesToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDessertsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddDessertsToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddDrinksToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddDrinksToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddExtrasToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddExtrasToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddFriesToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddFriesToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddNuggetsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddNuggetsToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Add_To_Cart/AddWrapToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddWrapToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Customization/BurgerCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/BurgerCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Customization/CoffeesCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/CoffeesCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Customization/DessertsCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/DessertsCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Customization/DrinksCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/DrinksCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Customization/WrapsCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/WrapsCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Other/Farewell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Other/Farewell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Other/Menu_Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Other/Menu_Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Other/MyPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Other/MyPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functional_Interfaces/Other/MyScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Other/MyScanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Operating_System/SystemStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operating_System/SystemStart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Products/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Burger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Coffees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Coffees.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Products/Desserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Desserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Drinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Drinks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Extras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Extras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Fries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Fries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Nuggets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Nuggets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Wraps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Wraps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -45,14 +60,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dredz/OneDrive/Pulpit/projekty_nnn/RestaurantOrderSystem v1.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/dredz/OneDrive/Pulpit/projekty_nnn/RestaurantOrderSystem v1.0"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.StartApp">
     <configuration name="StartApp" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
@@ -140,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674759865181</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added customization method to burger.">
+      <created>1676914102748</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676914102748</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,7 +190,8 @@
     <MESSAGE value="First try to implement system funcionality/display/management" />
     <MESSAGE value="AddItemToCart implemented" />
     <MESSAGE value="Added sorting and display to Cart/Finalization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sorting and display to Cart/Finalization" />
+    <MESSAGE value="Added customization method to burger." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added customization method to burger." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

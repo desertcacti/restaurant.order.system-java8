@@ -1,4 +1,4 @@
-package Functional_Interfaces.Other;
+package Interfaces.Other;
 
 import java.util.Scanner;
 

@@ -1,11 +1,9 @@
-package Functional_Interfaces.Add_To_Cart;
+package Interfaces.Add_To_Cart;
 
 import FinalizationOrder.CartList;
 import FinalizationOrder.Finalization;
-import Functional_Interfaces.Other.MyScanner;
+import Interfaces.Other.MyScanner;
 import Operating_System.SystemStart;
-import Products.Coffees;
-import Products.Extras;
 import Products.Fries;
 
 public interface AddFriesToCart {

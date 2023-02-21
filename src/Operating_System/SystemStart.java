@@ -1,9 +1,9 @@
 package Operating_System;
 
-import Functional_Interfaces.Add_To_Cart.*;
-import Functional_Interfaces.Other.Farewell;
-import Functional_Interfaces.Other.Menu_Display;
-import Functional_Interfaces.Other.MyScanner;
+import Interfaces.Add_To_Cart.*;
+import Interfaces.Other.Farewell;
+import Interfaces.Other.Menu_Display;
+import Interfaces.Other.MyScanner;
 import Products.*;
 
 public class SystemStart {
@@ -71,7 +71,7 @@ public class SystemStart {
                 //trzeba zaimplementować ignoreCase'a
 
             default:
-               Start();
+
                break;
         }
     }

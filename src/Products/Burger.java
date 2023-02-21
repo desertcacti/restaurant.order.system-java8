@@ -1,5 +1,5 @@
 package Products;
-import Functional_Interfaces.Other.MyPrinter;
+import Interfaces.Other.MyPrinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;

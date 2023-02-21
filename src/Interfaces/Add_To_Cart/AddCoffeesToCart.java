@@ -1,10 +1,10 @@
-package Functional_Interfaces.Add_To_Cart;
+package Interfaces.Add_To_Cart;
 
+import Customization.CoffeesCustomization;
 import FinalizationOrder.CartList;
 import FinalizationOrder.Finalization;
-import Functional_Interfaces.Other.MyScanner;
+import Interfaces.Other.MyScanner;
 import Operating_System.SystemStart;
-import Products.Burger;
 import Products.Coffees;
 
 public interface AddCoffeesToCart {
@@ -25,7 +25,8 @@ public interface AddCoffeesToCart {
             CartList.addToCartValue(Coffees.coffeesList.get(scanner).getPrice());
             System.out.printf("%.2f", Coffees.coffeesList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");
-            addCoffeesToCart();
+            CoffeesCustomization.coffeesCustomization();
+
 
         }
     }

@@ -1,6 +1,4 @@
-package Functional_Interfaces.Other;
-
-import java.util.Scanner;
+package Interfaces.Other;
 
 
 public interface Menu_Display {
