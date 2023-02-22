@@ -54,10 +54,8 @@ public class SystemStart {
                 break;
 
             case 7:
-
-                Desserts.displayDessertsList();
-                AddDessertsToCart.addDessertsToCart();
-
+                Desserts.displayPreDessertList();
+                AddDessertsToCart.displayDessertsMainMenu();
                 break;
 
             case 8:
