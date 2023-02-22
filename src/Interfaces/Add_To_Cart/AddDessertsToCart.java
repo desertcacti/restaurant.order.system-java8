@@ -46,7 +46,7 @@ public interface AddDessertsToCart {
 
     static void addDessertsToCart() {
 
-        System.out.println("\nSelect dessert you want to add to your order: ");
+        System.out.println("Select dessert you want to add to your order: ");
         int scanner = MyScanner.myIntScanner() - 1;
 
         if (scanner < 0 || scanner > 11) {
@@ -61,7 +61,7 @@ public interface AddDessertsToCart {
             CartList.getCartList().add(Desserts.dessertsList.get(scanner));
             CartList.addToCartValue(Desserts.dessertsList.get(scanner).getPrice());
             System.out.printf("%.2f", Desserts.dessertsList.get(scanner).getPrice());
-            System.out.print(" PLN added to bill");
+            System.out.print(" PLN added to bill\n");
             addDessertsToCart();
 
         }

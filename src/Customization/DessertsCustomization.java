@@ -55,17 +55,19 @@ public class DessertsCustomization {
                     if (flag1IceCream == 1) {
                         System.out.println("Addition has already been added once");
                         yesChosenForIceCreamCustomization();
+                        break;
                     }
                     if (flag1IceCream == 0) {
                         CartList.addToCartValue(2.00);
                         System.out.println("2.00 PLN added to bill");
                         flag1IceCream = 1;
                         yesChosenForIceCreamCustomization();
+                        break;
                     }
                     break;
 
                 case 2:
-
+                    setFlagsOnNull();
                     Desserts.displayIceCreamList();
                     AddDessertsToCart.addIceCreamsToCart();
                     break;
@@ -116,12 +118,14 @@ public class DessertsCustomization {
                     if (flag1McFlurry == 1) {
                         System.out.println("Addition has already been added once");
                         yesChosenForMcFlurryCustomization();
+                        break;
                     }
                     if (flag1McFlurry == 0) {
                         CartList.addToCartValue(2.00);
                         System.out.println("2.00 PLN added to bill");
                         flag1McFlurry = 1;
                         yesChosenForMcFlurryCustomization();
+                        break;
                     }
                     break;
 
@@ -129,19 +133,21 @@ public class DessertsCustomization {
                     if (flag2McFlurry == 1) {
                         System.out.println("Addition has already been added once");
                         yesChosenForMcFlurryCustomization();
+                        break;
                     }
                     if (flag2McFlurry == 0) {
                         CartList.addToCartValue(2.00);
                         System.out.println("2.00 PLN added to bill");
                         flag2McFlurry = 1;
                         yesChosenForMcFlurryCustomization();
+                        break;
                     }
                     break;
 
 
 
                 case 3:
-
+                    setFlagsOnNull();
                     Desserts.displayMcFlurryList();
                     AddDessertsToCart.addMcFlurryToCart();
                     break;
@@ -161,6 +167,12 @@ public class DessertsCustomization {
         System.out.println("1.Additional coating - 2.00 PLN\n2.Additional sprinkles - 2.00 PLN\n\n3.End customization\n");
     }
 
+    private static void setFlagsOnNull() {
 
+        flag1IceCream = 0;
+        flag1McFlurry = 0;
+        flag2McFlurry = 0;
+
+    }
 
 }

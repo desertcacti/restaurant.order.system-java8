@@ -52,17 +52,20 @@ public class DrinksCustomization {
                     if (flag1 == 1) {
                         System.out.println("Addition has already been added once");
                         yesChosen();
+                        break;
                     }
                     if (flag1 == 0) {
                         CartList.addToCartValue(0.00);
                         System.out.println("0.00 PLN added to bill");
                         flag1 = 1;
                         yesChosen();
+                        break;
                     }
                     break;
 
                 case 2:
 
+                    setFlagsOnNull();
                     Drinks.displayDrinksList();
                     AddDrinksToCart.addDrinksToCart();
                     break;
@@ -79,6 +82,11 @@ public class DrinksCustomization {
 
 
     }
+    private static void setFlagsOnNull() {
 
+        flag1 = 0;
+
+
+    }
 
 }

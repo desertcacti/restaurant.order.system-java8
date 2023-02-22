@@ -47,6 +47,8 @@ public class Drinks {
 
 
     public static void displayDrinksList() {
+
+        System.out.println("Drinks menu:\n");
         MyPrinter.productListPrinter(drinksList);
         System.out.println("\n12.Back");
         System.out.println("13.Finalize order");

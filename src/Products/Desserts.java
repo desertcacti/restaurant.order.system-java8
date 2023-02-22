@@ -65,20 +65,23 @@ public class Desserts {
 
     public static void displayPreDessertList() {
 
-        System.out.println("1.Desserts\n2.Ice creams\n3.McFlurry\n\n4.Back");
+        System.out.println("Our desserts menu:\n\n1.Desserts\n2.Ice creams\n3.McFlurry\n\n4.Back");
     }
 
 
     public static void displayDessertsList() {
 
+        System.out.println("Desserts menu:\n");
         MyPrinter.productListPrinter(dessertsList);
         System.out.println("\n11.Back");
-        System.out.println("12.Finalize order");
+        System.out.println("12.Finalize order\n");
+
     }
 
 
     public static void displayIceCreamList() {
 
+        System.out.println("Ice cream menu:\n");
         MyPrinter.productListPrinter(iceCreamsList);
         System.out.println("\n7.Back");
         System.out.println("8.Finalize order\n");
@@ -87,6 +90,7 @@ public class Desserts {
 
     public static void displayMcFlurryList() {
 
+        System.out.println("McFlurry menu:\n");
         MyPrinter.productListPrinter(mcFlurryList);
         System.out.println("\n13.Back");
         System.out.println("14.Finalize order\n");

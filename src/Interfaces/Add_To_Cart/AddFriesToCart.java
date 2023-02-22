@@ -9,7 +9,7 @@ import Products.Fries;
 public interface AddFriesToCart {
     static void addFriesToCart() {
 
-        System.out.println("\nSelect dessert you want to add to your order: ");
+        System.out.println("\nSelect fries you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
         if (scanner < 0 || scanner > 5) {

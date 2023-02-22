@@ -9,7 +9,7 @@ import Products.Nuggets;
 public interface AddNuggetsToCart {
     static void addNuggetsToCart() {
 
-        System.out.println("\nSelect dessert you want to add to your order: ");
+        System.out.println("\nSelect nuggets you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
         if (scanner < 0 || scanner > 7) {

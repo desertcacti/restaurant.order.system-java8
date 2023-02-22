@@ -1,5 +1,6 @@
 package Interfaces.Add_To_Cart;
 
+import Customization.WrapsCustomization;
 import FinalizationOrder.CartList;
 import FinalizationOrder.Finalization;
 import Interfaces.Other.MyScanner;
@@ -10,7 +11,7 @@ public interface AddWrapToCart {
 
     static void addWrapToCart() {
 
-        System.out.println("\nSelect dessert you want to add to your order: ");
+        System.out.println("\nSelect wrap you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
         if (scanner < 0 || scanner > 5) {
@@ -25,7 +26,7 @@ public interface AddWrapToCart {
             CartList.addToCartValue(Wraps.wrapsList.get(scanner).getPrice());
             System.out.printf("%.2f", Wraps.wrapsList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");
-            addWrapToCart();
+            WrapsCustomization.wrapsCustomization();
 
         }
     }

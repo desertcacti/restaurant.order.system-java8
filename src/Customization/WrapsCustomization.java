@@ -57,12 +57,14 @@ public class WrapsCustomization {
                     if (flag1 == 1) {
                         System.out.println("Addition has already been added once");
                         yesChosen();
+                        break;
                     }
                     if (flag1 == 0) {
                         CartList.addToCartValue(2.00);
                         System.out.println("2.00 PLN added to bill");
                         flag1 = 1;
                         yesChosen();
+                        break;
                     }
                     break;
 
@@ -70,12 +72,14 @@ public class WrapsCustomization {
                     if (flag2 == 1) {
                         System.out.println("Addition has already been added once");
                         yesChosen();
+                        break;
                     }
                     if (flag2 == 0) {
                         CartList.addToCartValue(2.00);
                         System.out.println("2.00 PLN added to bill");
                         flag2 = 1;
                         yesChosen();
+                        break;
                     }
                     break;
 
@@ -83,12 +87,14 @@ public class WrapsCustomization {
                     if (flag3 == 1) {
                         System.out.println("Addition has already been added once");
                         yesChosen();
+                        break;
                     }
                     if (flag3 == 0) {
                         CartList.addToCartValue(0.50);
                         System.out.println("0.50 PLN added to bill");
                         flag3 = 1;
                         yesChosen();
+                        break;
                     }
                     break;
 
@@ -96,12 +102,14 @@ public class WrapsCustomization {
                     if (flag4 == 1) {
                         System.out.println("Addition has already been added once");
                         yesChosen();
+                        break;
                     }
                     if (flag4 == 0) {
                         CartList.addToCartValue(0.50);
                         System.out.println("0.50 PLN added to bill");
                         flag4 = 1;
                         yesChosen();
+                        break;
                     }
                     break;
 
@@ -110,12 +118,14 @@ public class WrapsCustomization {
                     if (flag5 == 1) {
                         System.out.println("Addition has already been added once");
                         yesChosen();
+                        break;
                     }
                     if (flag5 == 0) {
                         CartList.addToCartValue(0.50);
                         System.out.println("0.50 PLN added to bill");
                         flag5 = 1;
                         yesChosen();
+                        break;
                     }
                     break;
 
@@ -124,17 +134,19 @@ public class WrapsCustomization {
                     if (flag6 == 1) {
                         System.out.println("Addition has already been added once");
                         yesChosen();
+                        break;
                     }
                     if (flag6 == 0) {
                         CartList.addToCartValue(0.50);
                         System.out.println("0.50 PLN added to bill");
                         flag6 = 1;
                         yesChosen();
+                        break;
                     }
                     break;
 
                 case 7:
-
+                    setFlagsOnNull();
                     Wraps.displayWrapsList();
                     AddWrapToCart.addWrapToCart();
                     break;
@@ -154,7 +166,16 @@ public class WrapsCustomization {
 
     }
 
+    private static void setFlagsOnNull() {
 
+        flag1 = 0;
+        flag2 = 0;
+        flag3 = 0;
+        flag4 = 0;
+        flag5 = 0;
+        flag6 = 0;
+
+    }
 
 
 

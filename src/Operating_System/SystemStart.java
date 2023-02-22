@@ -67,6 +67,7 @@ public class SystemStart {
             case 9:
                 Farewell.farewell();
                 //trzeba zaimplementować ignoreCase'a
+//                break;
 
             default:
 

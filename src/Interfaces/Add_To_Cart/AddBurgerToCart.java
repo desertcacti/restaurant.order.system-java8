@@ -12,6 +12,7 @@ public interface AddBurgerToCart {
 
     static void addBurgerToCart() {
 
+
         System.out.println("\nSelect burger you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
@@ -29,16 +30,6 @@ public interface AddBurgerToCart {
             System.out.print(" PLN added to bill\n");
             BurgerCustomization.burgerCustomization();
 
-
-
-
-
-
-
-
-
-
-//            addBurgerToCart();
 
 
         }

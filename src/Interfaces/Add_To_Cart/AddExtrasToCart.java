@@ -9,7 +9,7 @@ import Products.Extras;
 public interface AddExtrasToCart {
     static void addExtrasToCart() {
 
-        System.out.println("\nSelect dessert you want to add to your order: ");
+        System.out.println("\nSelect extras you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
         if (scanner < 0 || scanner > 11) {
