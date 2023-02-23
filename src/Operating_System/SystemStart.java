@@ -5,13 +5,14 @@ import Interfaces.Other.Farewell;
 import Interfaces.Other.Menu_Display;
 import Interfaces.Other.MyScanner;
 import Products.*;
+import Two4You.Two4You;
 
 public class SystemStart {
 
 
     public static void Start() {
 
-        System.out.println("Welcome in McRonald!\n");
+        System.out.println("\nWelcome in McRonald!\n");
 
         Menu_Display.displayMenu();
         int choice = MyScanner.myIntScanner();
@@ -65,6 +66,20 @@ public class SystemStart {
                 break;
 
             case 9:
+                Two4You.two4YouMethod();
+
+
+                break;
+
+            case 10:
+                System.out.println("Sets");
+
+                break;
+
+            case 11:
+                System.out.println("Summary");
+
+            case 12:
                 Farewell.farewell();
                 //trzeba zaimplementować ignoreCase'a
 //                break;
