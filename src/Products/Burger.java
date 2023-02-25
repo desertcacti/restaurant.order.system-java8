@@ -39,6 +39,13 @@ public class Burger implements MyPrinter {
     }
 
 
+    public static void displayBurgerList() {
+
+        System.out.println("\nBurgers menu:\n");
+        MyPrinter.productListPrinter(burgersList);
+        System.out.println("\n12.Back");
+        System.out.println("13.Finalize order");
+    }
 
 
 
@@ -51,23 +58,4 @@ public class Burger implements MyPrinter {
                 + " PLN"
                 ;
     }
-
-
-  public static void displayBurgerList() {
-
-        System.out.println("Burgers menu:\n");
-        MyPrinter.productListPrinter(burgersList);
-        System.out.println("\n12.Back");
-        System.out.println("13.Finalize order");
-    }
-
-
-
-
-
-
-
-
-
-
 }

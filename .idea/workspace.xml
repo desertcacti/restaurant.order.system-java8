@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="workspace push/commit.">
+    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="added new ordering functionality">
       <change afterPath="$PROJECT_DIR$/TeT/todo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Customization/Two4YouCustomization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Two4You/Two4You.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customization/Two4YouCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/Two4YouCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FinalizationOrder/CartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FinalizationOrder/CartList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddBurgerToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddBurgerToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddCoffeesToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddCoffeesToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddDessertsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddDessertsToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddDrinksToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddDrinksToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddExtrasToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddExtrasToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddFriesToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddFriesToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddNuggetsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddNuggetsToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddWrapToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Add_To_Cart/AddWrapToCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaces/Other/Menu_Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Other/Menu_Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Operating_System/SystemStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operating_System/SystemStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Burger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Coffees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Coffees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Desserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Desserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Drinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Drinks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Extras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Extras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Fries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Fries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Nuggets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Nuggets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Wraps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Wraps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Two4You/Two4You.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Two4You/Two4You.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,22 +54,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/dredz/OneDrive/Pulpit/projekty_nnn/RestaurantOrderSystem v1.0",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dredz/OneDrive/Pulpit/projekty_nnn/RestaurantOrderSystem v1.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.StartApp">
     <configuration name="StartApp" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
@@ -175,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677097240015</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added new ordering functionality">
+      <created>1677188508906</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677188508906</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,7 +227,8 @@
     <MESSAGE value="Refactoring desserts and adding customization method." />
     <MESSAGE value="Fixed bug with customization method." />
     <MESSAGE value="workspace push/commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace push/commit." />
+    <MESSAGE value="added new ordering functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new ordering functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -215,6 +240,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.InputMismatchException" package="java.util" />
           <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="3" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

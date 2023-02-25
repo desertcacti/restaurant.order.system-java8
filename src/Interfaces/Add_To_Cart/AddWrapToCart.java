@@ -11,7 +11,7 @@ public interface AddWrapToCart {
 
     static void addWrapToCart() {
 
-        System.out.println("\nSelect wrap you want to add to your order: ");
+        System.out.print("\nSelect wrap you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
         if (scanner < 0 || scanner > 5) {
@@ -22,7 +22,7 @@ public interface AddWrapToCart {
         } else if (scanner == 5) {
             Finalization.finalizationOfOrder();
         } else {
-            CartList.getCartList().add(Wraps.wrapsList.get(scanner));
+            CartList.addToCartList(Wraps.wrapsList.get(scanner));
             CartList.addToCartValue(Wraps.wrapsList.get(scanner).getPrice());
             System.out.printf("%.2f", Wraps.wrapsList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");

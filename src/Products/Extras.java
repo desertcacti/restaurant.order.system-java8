@@ -43,7 +43,7 @@ public class Extras {
 
     public static void displayExtrasList() {
 
-        System.out.println("Extras menu:\n");
+        System.out.println("\nExtras menu:\n");
         MyPrinter.productListPrinter(extrasList);
         System.out.println("\n11.Back");
         System.out.println("12.Finalize order");

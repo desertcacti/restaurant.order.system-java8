@@ -12,8 +12,7 @@ public interface AddBurgerToCart {
 
     static void addBurgerToCart() {
 
-
-        System.out.println("\nSelect burger you want to add to your order: ");
+        System.out.print("\nSelect burger you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
         if (scanner < 0 || scanner > 13) {
@@ -24,7 +23,7 @@ public interface AddBurgerToCart {
         } else if (scanner == 12) {
             Finalization.finalizationOfOrder();
         } else {
-            CartList.getCartList().add(Burger.burgersList.get(scanner));
+            CartList.addToCartList(Burger.burgersList.get(scanner));
             CartList.addToCartValue(Burger.burgersList.get(scanner).getPrice());
             System.out.printf("%.2f", Burger.burgersList.get(scanner).getPrice());
             System.out.print(" PLN added to bill\n");

@@ -6,10 +6,8 @@ public class CartList {
 
     private static ArrayList<Object> cartList = new ArrayList<>();
 
-    private static Map<Object, Integer> cartLinkedHashMap = new LinkedHashMap<>();
+//    private static Map<Object, Integer> cartLinkedHashMap = new LinkedHashMap<>();
     private static double cartValue = 00.00;
-
-
 
     public static void printCartList() {
 
@@ -54,6 +52,12 @@ public class CartList {
 
     public static ArrayList getCartList () {
         return cartList;
+    }
+
+    public static void addToCartList(Object e) {
+
+        cartList.add(e);
+
     }
 
 

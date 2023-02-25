@@ -46,7 +46,7 @@ public interface AddDessertsToCart {
 
     static void addDessertsToCart() {
 
-        System.out.println("Select dessert you want to add to your order: ");
+        System.out.print("Select dessert you want to add to your order: ");
         int scanner = MyScanner.myIntScanner() - 1;
 
         if (scanner < 0 || scanner > 11) {
@@ -68,7 +68,7 @@ public interface AddDessertsToCart {
     }
 
     static void addIceCreamsToCart() {
-        System.out.println("Select ice cream you want to add to your order: ");
+        System.out.print("Select ice cream you want to add to your order: ");
         int scanner = MyScanner.myIntScanner() - 1;
 
         if (scanner < 0 || scanner > 7) {
@@ -94,7 +94,7 @@ public interface AddDessertsToCart {
 
         static void addMcFlurryToCart() {
 
-            System.out.println("Select McFlurry you want to add to your order: ");
+            System.out.print("Select McFlurry you want to add to your order: ");
             int scanner = MyScanner.myIntScanner() - 1;
 
             if (scanner < 0 || scanner > 13) {
@@ -106,7 +106,7 @@ public interface AddDessertsToCart {
             } else if (scanner == 13) {
                 Finalization.finalizationOfOrder();
             } else {
-                CartList.getCartList().add(Desserts.mcFlurryList.get(scanner));
+                CartList.addToCartList(Desserts.mcFlurryList.get(scanner));
                 CartList.addToCartValue(Desserts.mcFlurryList.get(scanner).getPrice());
                 System.out.printf("%.2f", Desserts.mcFlurryList.get(scanner).getPrice());
                 System.out.print(" PLN added to bill\n");

@@ -39,7 +39,7 @@ public class Fries{
 
     public static void displayFriesList() {
 
-        System.out.println("Fries menu:\n");
+        System.out.println("\nFries menu:\n");
         MyPrinter.productListPrinter(friesList);
         System.out.println("\n5.Back");
         System.out.println("6.Finalize order");

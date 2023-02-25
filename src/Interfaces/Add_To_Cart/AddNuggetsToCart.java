@@ -9,7 +9,7 @@ import Products.Nuggets;
 public interface AddNuggetsToCart {
     static void addNuggetsToCart() {
 
-        System.out.println("\nSelect nuggets you want to add to your order: ");
+        System.out.print("\nSelect nuggets you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
         if (scanner < 0 || scanner > 7) {
@@ -20,7 +20,7 @@ public interface AddNuggetsToCart {
         } else if (scanner == 7) {
             Finalization.finalizationOfOrder();
         } else {
-            CartList.getCartList().add(Nuggets.nuggetsList.get(scanner));
+            CartList.addToCartList(Nuggets.nuggetsList.get(scanner));
             CartList.addToCartValue(Nuggets.nuggetsList.get(scanner).getPrice());
             System.out.printf("%.2f", Nuggets.nuggetsList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");

@@ -10,7 +10,7 @@ import Products.Coffees;
 public interface AddCoffeesToCart {
     static void addCoffeesToCart() {
 
-        System.out.println("\nSelect coffee you want to add to your order: ");
+        System.out.print("\nSelect coffee you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
         if (scanner < 0 || scanner > 8) {
@@ -21,7 +21,7 @@ public interface AddCoffeesToCart {
         } else if (scanner == 8) {
             Finalization.finalizationOfOrder();
         } else {
-            CartList.getCartList().add(Coffees.coffeesList.get(scanner));
+            CartList.addToCartList(Coffees.coffeesList.get(scanner));
             CartList.addToCartValue(Coffees.coffeesList.get(scanner).getPrice());
             System.out.printf("%.2f", Coffees.coffeesList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");

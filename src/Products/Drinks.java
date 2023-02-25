@@ -16,7 +16,7 @@ public class Drinks {
             new Drinks("Tea", 9.10),
             new Drinks("Lipton Ice Tea", 7.50),
             new Drinks("CocaCola", 7.50),
-            new Drinks("CocaCola 0", 7.50),
+            new Drinks("CocaCola Zero", 7.50),
             new Drinks("Fanta", 7.50),
             new Drinks("Sprite", 7.50),
             new Drinks("Chocolate Shake", 8.90),
@@ -48,7 +48,7 @@ public class Drinks {
 
     public static void displayDrinksList() {
 
-        System.out.println("Drinks menu:\n");
+        System.out.println("\nDrinks menu:\n");
         MyPrinter.productListPrinter(drinksList);
         System.out.println("\n12.Back");
         System.out.println("13.Finalize order");

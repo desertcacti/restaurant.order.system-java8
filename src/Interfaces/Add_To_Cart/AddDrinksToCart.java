@@ -10,7 +10,7 @@ import Products.Drinks;
 public interface AddDrinksToCart {
     static void addDrinksToCart() {
 
-        System.out.println("\nSelect drink you want to add to your order: ");
+        System.out.print("\nSelect drink you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
         if (scanner < 0 || scanner > 12) {
@@ -22,7 +22,7 @@ public interface AddDrinksToCart {
             Finalization.finalizationOfOrder();
         } else {
 
-            CartList.getCartList().add(Drinks.drinksList.get(scanner));
+            CartList.addToCartList(Drinks.drinksList.get(scanner));
             CartList.addToCartValue(Drinks.drinksList.get(scanner).getPrice());
             System.out.printf("%.2f", Drinks.drinksList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");

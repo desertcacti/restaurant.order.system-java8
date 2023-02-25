@@ -9,7 +9,7 @@ import Products.Extras;
 public interface AddExtrasToCart {
     static void addExtrasToCart() {
 
-        System.out.println("\nSelect extras you want to add to your order: ");
+        System.out.print("\nSelect extras you want to add to your order: ");
         int scanner = MyScanner.myIntScanner()-1;
 
         if (scanner < 0 || scanner > 11) {
@@ -20,7 +20,7 @@ public interface AddExtrasToCart {
         } else if (scanner == 11) {
             Finalization.finalizationOfOrder();
         } else {
-            CartList.getCartList().add(Extras.extrasList.get(scanner));
+            CartList.addToCartList(Extras.extrasList.get(scanner));
             CartList.addToCartValue(Extras.extrasList.get(scanner).getPrice());
             System.out.printf("%.2f", Extras.extrasList.get(scanner).getPrice());
             System.out.print(" PLN added to bill");

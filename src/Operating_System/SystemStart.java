@@ -13,8 +13,8 @@ public class SystemStart {
     public static void Start() {
 
         System.out.println("\nWelcome in McRonald!\n");
-
         Menu_Display.displayMenu();
+        System.out.print("\nEnter choice: ");
         int choice = MyScanner.myIntScanner();
 
         switch (choice) {
@@ -72,12 +72,12 @@ public class SystemStart {
                 break;
 
             case 10:
-                System.out.println("Sets");
+
 
                 break;
 
             case 11:
-                System.out.println("Summary");
+
 
             case 12:
                 Farewell.farewell();

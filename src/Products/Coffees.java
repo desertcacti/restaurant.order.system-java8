@@ -45,7 +45,7 @@ public class Coffees {
 
     public static void displayCoffeesList() {
 
-        System.out.println("Coffees menu:\n");
+        System.out.println("\nCoffees menu:\n");
         MyPrinter.productListPrinter(coffeesList);
         System.out.println("\n8.Back");
         System.out.println("9.Finalize order");

@@ -43,7 +43,7 @@ public class Nuggets {
 
     public static void displayNuggetsList() {
 
-        System.out.println("Nuggets menu:\n");
+        System.out.println("\nNuggets menu:\n");
         MyPrinter.productListPrinter(nuggetsList);
         System.out.println("\n7.Back");
         System.out.println("8.Finalize order");
