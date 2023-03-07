@@ -9,7 +9,7 @@ public class Drinks {
     private String name;
     private double price;
 
-    public static final ArrayList<Drinks> drinksList = new ArrayList<>(Arrays.asList(
+    private static final ArrayList<Drinks> drinksList = new ArrayList<>(Arrays.asList(
 
             new Drinks("Still water", 8.70),
             new Drinks("Sparkling water", 8.70),
@@ -46,7 +46,7 @@ public class Drinks {
     }
 
 
-    public static void displayDrinksList() {
+    public static void displayDrinksMenu() {
 
         System.out.println("\nDrinks menu:\n");
         MyPrinter.productListPrinter(drinksList);
@@ -55,7 +55,11 @@ public class Drinks {
     }
 
 
+ public static ArrayList<Drinks> getDrinksList() {
+        return drinksList;
 
+
+ }
 
 
 

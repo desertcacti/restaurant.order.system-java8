@@ -9,7 +9,7 @@ public class Coffees {
     private String name;
     private double price;
 
-    public static final ArrayList<Coffees> coffeesList = new ArrayList<>(Arrays.asList(
+    private static final ArrayList<Coffees> coffeesList = new ArrayList<>(Arrays.asList(
 
             new Coffees("Black Coffee", 8.90),
             new Coffees("Coffee with milk", 9.70),
@@ -31,6 +31,10 @@ public class Coffees {
         return price;
     }
 
+    public static ArrayList<Coffees> getCoffeesList() {
+        return coffeesList;
+    }
+
     @Override
     public String toString () {
 
@@ -43,7 +47,7 @@ public class Coffees {
     }
 
 
-    public static void displayCoffeesList() {
+    public static void displayCoffeesMenu() {
 
         System.out.println("\nCoffees menu:\n");
         MyPrinter.productListPrinter(coffeesList);

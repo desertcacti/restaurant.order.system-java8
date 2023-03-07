@@ -9,7 +9,7 @@ public class Fries{
     private String name;
     private double price;
 
-    public static final ArrayList<Fries> friesList = new ArrayList<>(Arrays.asList(
+    private static final ArrayList<Fries> friesList = new ArrayList<>(Arrays.asList(
             new Fries("Small fries", 9.40),
             new Fries("Medium Fries", 10.50),
             new Fries("Large fries", 10.90),
@@ -37,12 +37,16 @@ public class Fries{
     }
 
 
-    public static void displayFriesList() {
+    public static void displayFriesMenu() {
 
         System.out.println("\nFries menu:\n");
         MyPrinter.productListPrinter(friesList);
         System.out.println("\n5.Back");
         System.out.println("6.Finalize order");
+    }
+
+    public static ArrayList<Fries> getFriesList() {
+        return friesList;
     }
 
 

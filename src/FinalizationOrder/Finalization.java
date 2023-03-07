@@ -8,10 +8,9 @@ public class Finalization {
 
    public static void finalizationOfOrder () {
 
-        System.out.println("Elements in your Cart: ");
+        System.out.println("\nElements in your Cart: ");
         CartList.printCartList();
         System.out.printf("\nTotal sum of your Cart is: %.2f PLN", CartList.getCartValue());
-
 
 
 

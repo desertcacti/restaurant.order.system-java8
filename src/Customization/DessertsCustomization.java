@@ -1,11 +1,10 @@
 package Customization;
 
 import FinalizationOrder.CartList;
-import Interfaces.Add_To_Cart.AddDessertsToCart;
-import Interfaces.Add_To_Cart.AddDrinksToCart;
+import AddToCart.AddDessertsToCart;
 import Interfaces.Other.MyScanner;
+import Interfaces.Other.getValidNumber;
 import Products.Desserts;
-import Products.Drinks;
 
 public class DessertsCustomization {
 
@@ -42,12 +41,12 @@ public class DessertsCustomization {
     static void yesChosenForIceCreamCustomization() {
 
         System.out.println("Select addition you want to add to ice cream:");
-        int choice = MyScanner.myIntScanner();
+        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance());
 
-        if (choice < 1 || choice > 2) {
-            System.out.println("Please try again...");
-            yesChosenForIceCreamCustomization();
-        } else {
+//        if (choice < 1 || choice > 2) {
+//            System.out.println("Please try again...");
+//            yesChosenForIceCreamCustomization();
+//        } else {
 
             switch (choice) {
 
@@ -68,14 +67,14 @@ public class DessertsCustomization {
 
                 case 2:
                     setFlagsOnNull();
-                    Desserts.displayIceCreamList();
+                    Desserts.displayIceCreamMenu();
                     AddDessertsToCart.addIceCreamsToCart();
                     break;
 
 
             }
         }
-    }
+//    }
 
     public static void mcFlurryCustomization() {
 
@@ -105,12 +104,12 @@ public class DessertsCustomization {
     static void yesChosenForMcFlurryCustomization() {
 
         System.out.println("Select addition you want to add to McFlurry: ");
-        int choice = MyScanner.myIntScanner();
+        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance());
 
-        if (choice < 1 || choice > 3) {
-            System.out.println("Please try again...");
-            yesChosenForMcFlurryCustomization();
-        } else {
+//        if (choice < 1 || choice > 3) {
+//            System.out.println("Please try again...");
+//            yesChosenForMcFlurryCustomization();
+//        } else {
 
             switch (choice) {
 
@@ -148,14 +147,14 @@ public class DessertsCustomization {
 
                 case 3:
                     setFlagsOnNull();
-                    Desserts.displayMcFlurryList();
+                    Desserts.displayMcFlurryMenu();
                     AddDessertsToCart.addMcFlurryToCart();
                     break;
 
 
             }
         }
-    }
+//    }
 
     static void displayIceCreamsAdditions() {
 

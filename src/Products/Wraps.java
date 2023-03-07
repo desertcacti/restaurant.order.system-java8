@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class Wraps {
     private String name;
     private double price;
-    public static final ArrayList<Wraps> wrapsList = new ArrayList<>(Arrays.asList(
+    private static final ArrayList<Wraps> wrapsList = new ArrayList<>(Arrays.asList(
             new Wraps("McWrap Veggie", 18.60),
             new Wraps("McWrap Crispy Classic", 19.90),
             new Wraps("McWrap Crispy Bacon Deluxe", 20.50),
@@ -43,7 +43,7 @@ public class Wraps {
     }
 
 
-    public static void displayWrapsList() {
+    public static void displayWrapsMenu() {
 
         System.out.println("\nWraps menu:\n");
         MyPrinter.productListPrinter(wrapsList);
@@ -52,7 +52,9 @@ public class Wraps {
     }
 
 
-
+    public static ArrayList<Wraps> getWrapsList() {
+        return wrapsList;
+    }
 
 
 

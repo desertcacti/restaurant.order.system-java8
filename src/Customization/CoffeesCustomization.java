@@ -1,8 +1,9 @@
 package Customization;
 
 import FinalizationOrder.CartList;
-import Interfaces.Add_To_Cart.AddCoffeesToCart;
+import AddToCart.AddCoffeesToCart;
 import Interfaces.Other.MyScanner;
+import Interfaces.Other.getValidNumber;
 import Products.Coffees;
 
 public class CoffeesCustomization {
@@ -19,9 +20,9 @@ public class CoffeesCustomization {
     public static void coffeesCustomization() {
 
         System.out.println("\nDo you want to customize selected item? Y/N");
-        String decision = MyScanner.myLineScanner();
+        String choice = MyScanner.getNewInstance().nextLine();
 
-        switch(decision) {
+        switch(choice) {
 
             case "Y":
                 displayCoffeesAdditions();
@@ -44,12 +45,13 @@ public class CoffeesCustomization {
     static void yesChosen() {
 
         System.out.println("Select addition you want to add to coffee: ");
-        int choice = MyScanner.myIntScanner();
+//        int choice = MyScanner.myIntScanner();
+        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance());
 
-        if (choice < 1 || choice > 8) {
-            System.out.println("Please try again...");
-            yesChosen();
-        } else {
+//        if (choice < 1 || choice > 8) {
+//            System.out.println("Please try again...");
+//            yesChosen();
+//        } else {
 
             switch (choice) {
 
@@ -155,14 +157,14 @@ public class CoffeesCustomization {
 
                 case 8:
                     setFlagsOnNull();
-                    Coffees.displayCoffeesList();
+                    Coffees.displayCoffeesMenu();
                     AddCoffeesToCart.addCoffeesToCart();
                     break;
 
 
             }
         }
-    }
+//    }
 
     static void displayCoffeesAdditions() {
 

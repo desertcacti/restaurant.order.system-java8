@@ -1,66 +1,63 @@
 package Operating_System;
-
-import Interfaces.Add_To_Cart.*;
-import Interfaces.Other.Farewell;
-import Interfaces.Other.Menu_Display;
-import Interfaces.Other.MyScanner;
+import AddToCart.*;
+import FinalizationOrder.Finalization;
+import Interfaces.Other.*;
 import Products.*;
 import Two4You.Two4You;
 
-public class SystemStart {
-
-
+public class SystemStart implements getValidNumber {
     public static void Start() {
 
         System.out.println("\nWelcome in McRonald!\n");
         Menu_Display.displayMenu();
-        System.out.print("\nEnter choice: ");
-        int choice = MyScanner.myIntScanner();
+
+        int choice = getValidNumber.getValidNumberSystemStart(MyScanner.getNewInstance(), 12);
 
         switch (choice) {
 
             case 1:
-                Burger.displayBurgerList();
+                Burger.displayBurgerMenu();
                 AddBurgerToCart.addBurgerToCart();
+
 
                 break;
 
             case 2:
-                Wraps.displayWrapsList();
+                Wraps.displayWrapsMenu();
                 AddWrapToCart.addWrapToCart();
 
                 break;
 
             case 3:
-                Fries.displayFriesList();
+                Fries.displayFriesMenu();
                 AddFriesToCart.addFriesToCart();
 
                 break;
 
             case 4:
-                Nuggets.displayNuggetsList();
+                Nuggets.displayNuggetsMenu();
                 AddNuggetsToCart.addNuggetsToCart();
                 break;
 
             case 5:
-                Drinks.displayDrinksList();
+                Drinks.displayDrinksMenu();
                 AddDrinksToCart.addDrinksToCart();
 
                 break;
 
             case 6:
-                Coffees.displayCoffeesList();
+                Coffees.displayCoffeesMenu();
                 AddCoffeesToCart.addCoffeesToCart();
 
                 break;
 
             case 7:
-                Desserts.displayPreDessertList();
+                Desserts.displayPreDessertMenu();
                 AddDessertsToCart.displayDessertsMainMenu();
                 break;
 
             case 8:
-                Extras.displayExtrasList();
+                Extras.displayExtrasMenu();
                 AddExtrasToCart.addExtrasToCart();
 
                 break;
@@ -77,16 +74,16 @@ public class SystemStart {
                 break;
 
             case 11:
-
+                Finalization.finalizationOfOrder();
+                break;
 
             case 12:
                 Farewell.farewell();
-                //trzeba zaimplementować ignoreCase'a
-//                break;
+                break;
 
-            default:
-
-               break;
         }
     }
 }
+
+
+

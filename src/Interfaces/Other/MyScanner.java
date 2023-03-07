@@ -1,12 +1,13 @@
 package Interfaces.Other;
 
 import java.util.Scanner;
-
+//
 public interface MyScanner {
 
+    Scanner scanner  = new Scanner(System.in);
+
     static int myIntScanner() {
-        Scanner sc = new Scanner(System.in);
-        return sc.nextInt();
+        return scanner.nextInt();
     }
 
 
@@ -16,4 +17,8 @@ public interface MyScanner {
 
     }
 
+
+     static Scanner getNewInstance() {
+        return new Scanner(System.in);
+    }
 }

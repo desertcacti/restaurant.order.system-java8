@@ -5,6 +5,7 @@ import Interfaces.Other.MyScanner;
 import Operating_System.SystemStart;
 
 import java.io.IOException;
+import java.util.InputMismatchException;
 
 public class Two4You {
     private static final double basicPrice = 7.90;
@@ -39,42 +40,56 @@ public class Two4You {
 
         System.out.println("\nOur Two4You menu:\n");
         displayFirsTwo4YouMenuView();
-        System.out.print("Select your Two4You basic item: ");
-        int choice = MyScanner.myIntScanner();
-        System.out.print("\n");
 
-        switch (choice) {
+        while (true) {
 
-            case 1:
-                //HAMBURGER
-                extraValueMealQuestion(basicPrice, extraValueCostV1, "Hamburger");
+            try {
+                System.out.print("Select your Two4You basic item: ");
+                int choice = MyScanner.myIntScanner();
+                System.out.print("\n");
+
+                switch (choice) {
+                    case 1:
+                        //HAMBURGER
+                        extraValueMealQuestion(basicPrice, extraValueCostV1, "Hamburger");
+                        break;
+
+                    case 2:
+                        //CHEESEBURGER
+                        extraValueMealQuestion(basicPrice, extraValueCostV1, "Cheeseburger");
+                        break;
+
+                    case 3:
+                        //CHIKKER
+                        extraValueMealQuestion(basicPrice, extraValueCostV1, "Chikker");
+                        break;
+
+                    case 4:
+                        //RED CHIKKER
+                        extraValueMealQuestion(basicPrice, extraValueCostV1, "Red Chikker");
+                        break;
+
+                    case 5:
+                        //JALAPENO BURGER
+                        extraValueMealQuestion(basicPrice, extraValueCostV2, "Jalapeno Burger");
+                        break;
+
+                    case 6:
+                        SystemStart.Start();
+                        break;
+
+                }
+                System.out.println("Please try again...");
                 break;
 
-            case 2:
-                //CHEESEBURGER
-                extraValueMealQuestion(basicPrice, extraValueCostV1, "Cheeseburger");
+            } catch (InputMismatchException e) {
+                System.out.println("\nPlease try again...");
                 break;
-
-            case 3:
-                //CHIKKER
-                extraValueMealQuestion(basicPrice, extraValueCostV1, "Chikker");
-                break;
-
-            case 4:
-                //RED CHIKKER
-                extraValueMealQuestion(basicPrice, extraValueCostV1, "Red Chikker");
-                break;
-
-            case 5:
-                //JALAPENO BURGER
-                extraValueMealQuestion(basicPrice, extraValueCostV2, "Jalapeno Burger");
-                break;
-
-            case 6:
-                SystemStart.Start();
-                break;
+            }
         }
     }
+
+
 
 
     static void extraValueMealQuestion(double basicPrice, double extraValueCost, String firstItemName) {

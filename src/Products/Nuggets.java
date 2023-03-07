@@ -9,7 +9,7 @@ public class Nuggets {
     private String name;
     private double price;
 
-    public static final ArrayList<Nuggets> nuggetsList = new ArrayList<>(Arrays.asList(
+    private static final ArrayList<Nuggets> nuggetsList = new ArrayList<>(Arrays.asList(
             new Nuggets("Six McNuggets", 16.00),
             new Nuggets("Nine McNuggets", 18.80),
             new Nuggets("Twenty McNuggets", 30.30),
@@ -40,8 +40,7 @@ public class Nuggets {
 
     }
 
-
-    public static void displayNuggetsList() {
+    public static void displayNuggetsMenu() {
 
         System.out.println("\nNuggets menu:\n");
         MyPrinter.productListPrinter(nuggetsList);
@@ -49,7 +48,9 @@ public class Nuggets {
         System.out.println("8.Finalize order");
     }
 
-
+    public static ArrayList<Nuggets> getNuggetsList() {
+        return nuggetsList;
+    }
 
 
 

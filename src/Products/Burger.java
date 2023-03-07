@@ -3,13 +3,14 @@ import Interfaces.Other.MyPrinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 
-public class Burger implements MyPrinter {
+public class Burger  {
     private String name;
     private double price;
 
-   public static final ArrayList<Burger> burgersList = new ArrayList<>(Arrays.asList(
+   private static final ArrayList<Burger> burgersList = new ArrayList<>(Arrays.asList(
             new Burger("Jalapeno Burger", 6.50),
             new Burger("Hamburger", 5.90),
             new Burger("Chikker", 7.50),
@@ -39,14 +40,17 @@ public class Burger implements MyPrinter {
     }
 
 
-    public static void displayBurgerList() {
+    public static void displayBurgerMenu() {
 
         System.out.println("\nBurgers menu:\n");
         MyPrinter.productListPrinter(burgersList);
         System.out.println("\n12.Back");
-        System.out.println("13.Finalize order");
+        System.out.println("13.Finalize order\n");
     }
 
+    public static ArrayList<Burger> getBurgerList() {
+        return burgersList;
+    }
 
 
     @Override

@@ -32,12 +32,24 @@ public class CartList {
         }
     }
 
+//    public void printCartList() {
+//
+////        for(int i = 0; i < cartList.size(); i++) {
+////            System.out.println(i);
+////        }
+//
+//
+//    }
+
 
     public static void addToLinkedHashMapCart() {
-
-
-
     }
+
+
+//    public static void printCartList() {
+//
+//        cartList.forEach(System.out::println);
+//    }
 
 
    public static void addToCartValue (double price) {
@@ -46,7 +58,7 @@ public class CartList {
     }
 
 
-    public static double getCartValue() {
+    public static  double getCartValue() {
         return cartValue;
     }
 
@@ -57,8 +69,9 @@ public class CartList {
     public static void addToCartList(Object e) {
 
         cartList.add(e);
-
     }
+
+
 
 
 

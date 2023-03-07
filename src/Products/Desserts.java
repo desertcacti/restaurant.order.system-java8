@@ -1,8 +1,6 @@
 package Products;
 
-import Interfaces.Add_To_Cart.AddDessertsToCart;
 import Interfaces.Other.MyPrinter;
-import Interfaces.Other.MyScanner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +9,7 @@ public class Desserts {
     private String name;
    private double price;
 
-    public static final ArrayList<Desserts> dessertsList = new ArrayList<>(Arrays.asList(
+    private static final ArrayList<Desserts> dessertsList = new ArrayList<>(Arrays.asList(
             /// desserts
             new Desserts("Mango-passion fruit cake", 7.90),
             new Desserts("Apple cake", 7.90),
@@ -24,7 +22,7 @@ public class Desserts {
             new Desserts("Oatcake", 6.60),
             new Desserts("Chocolate chip cookie", 6.60)));
 
-    public static final ArrayList<Desserts> iceCreamsList = new ArrayList<>(Arrays.asList(
+    private static final ArrayList<Desserts> iceCreamsList = new ArrayList<>(Arrays.asList(
             new Desserts("Chocolate ice cream", 9.90),
             new Desserts("Strawberry ice cream", 9.90),
             new Desserts("Caramel cream ice cream", 9.90),
@@ -33,7 +31,7 @@ public class Desserts {
             new Desserts("Chocolate ice cream with caramel coating", 9.90)));
 
 
-    public static final ArrayList<Desserts> mcFlurryList = new ArrayList<>(Arrays.asList(
+    private static final ArrayList<Desserts> mcFlurryList = new ArrayList<>(Arrays.asList(
             /// Lion McFlurry
             new Desserts("Cream McFlurry with Lion sprinkles and strawberry coating", 11.50),
             new Desserts("Cream McFlurry with Lion sprinkles and chocolate coating", 11.50),
@@ -63,13 +61,13 @@ public class Desserts {
     }
 
 
-    public static void displayPreDessertList() {
+    public static void displayPreDessertMenu() {
 
         System.out.println("\nOur desserts menu:\n\n1.Desserts\n2.Ice creams\n3.McFlurry\n\n4.Back");
     }
 
 
-    public static void displayDessertsList() {
+    public static void displayDessertsMenu() {
 
         System.out.println("\nDesserts menu:\n");
         MyPrinter.productListPrinter(dessertsList);
@@ -79,7 +77,7 @@ public class Desserts {
     }
 
 
-    public static void displayIceCreamList() {
+    public static void displayIceCreamMenu() {
 
         System.out.println("\nIce cream menu:\n");
         MyPrinter.productListPrinter(iceCreamsList);
@@ -88,7 +86,7 @@ public class Desserts {
     }
 
 
-    public static void displayMcFlurryList() {
+    public static void displayMcFlurryMenu() {
 
         System.out.println("\nMcFlurry menu:\n");
         MyPrinter.productListPrinter(mcFlurryList);
@@ -96,7 +94,17 @@ public class Desserts {
         System.out.println("14.Finalize order\n");
     }
 
+    public static ArrayList<Desserts> getDessertsList() {
+        return dessertsList;
+    }
 
+    public static ArrayList<Desserts> getIceCreamsList() {
+        return iceCreamsList;
+    }
+
+    public static ArrayList<Desserts> getMcFlurryList() {
+        return mcFlurryList;
+    }
     @Override
     public String toString () {
 

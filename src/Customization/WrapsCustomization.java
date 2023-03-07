@@ -1,10 +1,9 @@
 package Customization;
 
 import FinalizationOrder.CartList;
-import Interfaces.Add_To_Cart.AddDrinksToCart;
-import Interfaces.Add_To_Cart.AddWrapToCart;
+import AddToCart.AddWrapToCart;
 import Interfaces.Other.MyScanner;
-import Products.Drinks;
+import Interfaces.Other.getValidNumber;
 import Products.Wraps;
 
 public class WrapsCustomization {
@@ -41,15 +40,16 @@ public class WrapsCustomization {
         }
     }
 
-    static void yesChosen() {
+   private static void yesChosen() {
 
         System.out.println("Select addition you want to add to wrap: ");
-        int choice = MyScanner.myIntScanner();
+//        int choice = MyScanner.myIntScanner();
 
-        if (choice < 1 || choice > 7) {
-            System.out.println("Please try again...");
-            yesChosen();
-        } else {
+        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance());
+//        if (choice < 1 || choice > 7) {
+//            System.out.println("Please try again...");
+//            yesChosen();
+//        } else {
 
             switch (choice) {
 
@@ -147,19 +147,19 @@ public class WrapsCustomization {
 
                 case 7:
                     setFlagsOnNull();
-                    Wraps.displayWrapsList();
+                    Wraps.displayWrapsMenu();
                     AddWrapToCart.addWrapToCart();
                     break;
 
 
             }
         }
-    }
+//    }
 
 
 
 
-    static void displayWrapsAdditions() {
+   public static void displayWrapsAdditions() {
 
         System.out.println("1.Chicken - 2.00 PLN\n2.Bacon- 2.00 PLN\n3.Tomato - 0.50 PLN\n4.Sauce - 0.50 PLN\n5.Lettuce - 0.50 PLN\n6.Cheddar - 0.50 PLN\n\n7.End customization");
 

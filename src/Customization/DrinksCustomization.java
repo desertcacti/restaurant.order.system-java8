@@ -1,10 +1,9 @@
 package Customization;
 
 import FinalizationOrder.CartList;
-import Interfaces.Add_To_Cart.AddCoffeesToCart;
-import Interfaces.Add_To_Cart.AddDrinksToCart;
+import AddToCart.AddDrinksToCart;
 import Interfaces.Other.MyScanner;
-import Products.Coffees;
+import Interfaces.Other.getValidNumber;
 import Products.Drinks;
 
 public class DrinksCustomization {
@@ -39,12 +38,14 @@ public class DrinksCustomization {
     static void yesChosen() {
 
         System.out.println("Select addition you want to add to your drink: ");
-        int choice = MyScanner.myIntScanner();
+//        int choice = MyScanner.myIntScanner();
 
-        if (choice < 1 || choice > 2) {
-            System.out.println("Please try again...");
-            yesChosen();
-        } else {
+        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance());
+//
+//        if (choice < 1 || choice > 2) {
+//            System.out.println("Please try again...");
+//            yesChosen();
+//        } else {
 
             switch (choice) {
 
@@ -66,14 +67,14 @@ public class DrinksCustomization {
                 case 2:
 
                     setFlagsOnNull();
-                    Drinks.displayDrinksList();
+                    Drinks.displayDrinksMenu();
                     AddDrinksToCart.addDrinksToCart();
                     break;
 
 
             }
         }
-    }
+//    }
 
 
     static void displayDrinksAdditions() {
