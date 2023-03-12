@@ -12,7 +12,7 @@ public class DrinksCustomization {
 
     public static void drinksCustomization() {
 
-        System.out.println("\nDo you want to customize selected item? Y/N");
+        System.out.println("Do you want to customize selected item? Y/N");
         String decision = MyScanner.myLineScanner();
 
         switch (decision) {
@@ -22,42 +22,33 @@ public class DrinksCustomization {
                 yesChosen();
                 break;
 
-
             case "N":
                 AddDrinksToCart.addDrinksToCart();
                 break;
 
             default:
                 System.out.println("Please try again...");
-                displayDrinksAdditions();
+                drinksCustomization();
                 break;
-
         }
     }
 
-    static void yesChosen() {
+   private static void yesChosen() {
 
-        System.out.println("Select addition you want to add to your drink: ");
-//        int choice = MyScanner.myIntScanner();
-
-        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance());
-//
-//        if (choice < 1 || choice > 2) {
-//            System.out.println("Please try again...");
-//            yesChosen();
-//        } else {
+        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance(),2, "drink");
 
             switch (choice) {
 
                 case 1:
                     if (flag1 == 1) {
-                        System.out.println("Addition has already been added once");
+                        System.out.println("\nAddition has already been added once");
                         yesChosen();
                         break;
                     }
+
                     if (flag1 == 0) {
                         CartList.addToCartValue(0.00);
-                        System.out.println("0.00 PLN added to bill");
+                        System.out.println("\n0.00 PLN added to bill");
                         flag1 = 1;
                         yesChosen();
                         break;
@@ -65,29 +56,17 @@ public class DrinksCustomization {
                     break;
 
                 case 2:
-
                     setFlagsOnNull();
                     Drinks.displayDrinksMenu();
                     AddDrinksToCart.addDrinksToCart();
                     break;
-
-
             }
         }
-//    }
 
-
-    static void displayDrinksAdditions() {
-
-        System.out.println("1.Ice - 0.00 PLN\n2.End customization");
-
-
+    private static void displayDrinksAdditions() {
+        System.out.println("Additions:\n\n1.Ice - 0.00 PLN\n2.End customization\n");
     }
     private static void setFlagsOnNull() {
-
         flag1 = 0;
-
-
     }
-
 }

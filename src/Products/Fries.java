@@ -42,7 +42,7 @@ public class Fries{
         System.out.println("\nFries menu:\n");
         MyPrinter.productListPrinter(friesList);
         System.out.println("\n5.Back");
-        System.out.println("6.Finalize order");
+        System.out.println("6.Finalize order\n");
     }
 
     public static ArrayList<Fries> getFriesList() {

@@ -1,7 +1,9 @@
 package Two4You;
 
 import FinalizationOrder.CartList;
+import FinalizationOrder.Finalization;
 import Interfaces.Other.MyScanner;
+import Interfaces.Other.getValidNumber;
 import Operating_System.SystemStart;
 
 import java.io.IOException;
@@ -20,9 +22,14 @@ public class Two4You {
         this.price = price;
     }
 
-    static void displayFirsTwo4YouMenuView() {
+    static void displayMainTwo4YouMenuView() {
 
-        System.out.println("1.Hamburger\n2.Cheeseburger\n3.Chikker\n4.Red Chikker\n5.Jalapeno Burger\n\n6.Back\n");
+        System.out.println("1.Hamburger" +
+                        "\n2.Cheeseburger" +
+                        "\n3.Chikker\n" +
+                         "4.Red Chikker\n" +
+                        "5.Jalapeno Burger\n\n" +
+                        "6.Back\n7.Finalize\n");
     }
     static void displayBasicOrExtraValueMenu (boolean isBasicVersion) {
 
@@ -39,55 +46,48 @@ public class Two4You {
         //Main Two4You method, also included method which choose first item included.
 
         System.out.println("\nOur Two4You menu:\n");
-        displayFirsTwo4YouMenuView();
+        displayMainTwo4YouMenuView();
 
-        while (true) {
+            int choice = getValidNumber.getValidNumber(MyScanner.getNewInstance(), 7);
+            System.out.print("\n");
 
-            try {
-                System.out.print("Select your Two4You basic item: ");
-                int choice = MyScanner.myIntScanner();
-                System.out.print("\n");
+            switch (choice) {
+                case 1:
+                    //HAMBURGER
 
-                switch (choice) {
-                    case 1:
-                        //HAMBURGER
-                        extraValueMealQuestion(basicPrice, extraValueCostV1, "Hamburger");
-                        break;
+                    extraValueMealQuestion(basicPrice, extraValueCostV1, "Hamburger");
+                    break;
 
-                    case 2:
-                        //CHEESEBURGER
-                        extraValueMealQuestion(basicPrice, extraValueCostV1, "Cheeseburger");
-                        break;
+                case 2:
+                    //CHEESEBURGER
+                    extraValueMealQuestion(basicPrice, extraValueCostV1, "Cheeseburger");
+                    break;
 
-                    case 3:
-                        //CHIKKER
-                        extraValueMealQuestion(basicPrice, extraValueCostV1, "Chikker");
-                        break;
+                case 3:
+                    //CHIKKER
+                    extraValueMealQuestion(basicPrice, extraValueCostV1, "Chikker");
+                    break;
 
-                    case 4:
-                        //RED CHIKKER
-                        extraValueMealQuestion(basicPrice, extraValueCostV1, "Red Chikker");
-                        break;
+                case 4:
+                    //RED CHIKKER
+                    extraValueMealQuestion(basicPrice, extraValueCostV1, "Red Chikker");
+                    break;
 
-                    case 5:
-                        //JALAPENO BURGER
-                        extraValueMealQuestion(basicPrice, extraValueCostV2, "Jalapeno Burger");
-                        break;
+                case 5:
+                    //JALAPENO BURGER
+                    extraValueMealQuestion(basicPrice, extraValueCostV2, "Jalapeno Burger");
+                    break;
 
-                    case 6:
-                        SystemStart.Start();
-                        break;
+                case 6:
+                    SystemStart.Start();
+                    break;
 
-                }
-                System.out.println("Please try again...");
-                break;
-
-            } catch (InputMismatchException e) {
-                System.out.println("\nPlease try again...");
-                break;
+                case 7:
+                    Finalization.finalizationOfOrder();
+                    break;
             }
         }
-    }
+
 
 
 
@@ -97,8 +97,7 @@ public class Two4You {
 
         boolean isBasicVersion;
 
-        System.out.printf("Do you want make it an extra value meal? + %.2f PLN? Y/N", extraValueCost);
-        System.out.print("\n\nEnter selected: ");
+        System.out.printf("Do you want make it an extra value meal? + %.2f PLN? Y/N\n", extraValueCost);
 
         String choice = MyScanner.myLineScanner();
 
@@ -120,7 +119,7 @@ public class Two4You {
                 break;
 
             default:
-                System.out.println("\nPlease try again...");
+                System.out.println("\nInvalid input. Please try again...");
                 extraValueMealQuestion(basicPrice, extraValueCost, firstItemName);
                 break;
         }
@@ -135,8 +134,7 @@ public class Two4You {
         if (isBasicVersion) {
             //FOR BASIC
 
-            System.out.print("Select second item: ");
-            int choice = MyScanner.myIntScanner();
+            int choice = getValidNumber.getValidNumber(MyScanner.getNewInstance(),6);
 
             switch (choice) {
 
@@ -144,16 +142,14 @@ public class Two4You {
                     //FRIES ADDING
                     secondItemName = "Small fries";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
                     break;
 
                 case 2:
                     //COCA-COLA ADDING
                     secondItemName = "Coca-Cola 250ml";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
                     break;
 
 
@@ -161,32 +157,28 @@ public class Two4You {
                     //Coca-Cola Zero ADDING
                     secondItemName = "Coca-Cola Zero 250ml";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
                     break;
 
                 case 4:
                     //FANTA ADDING
                     secondItemName = "Fanta 250ml";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
                     break;
 
                 case 5:
                     //SPRITE ADDING
                     secondItemName = "Sprite 250ml";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
                     break;
 
                 case 6:
                     //ICE TEA ADDING
                     secondItemName = "Ice Tea 250ml";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
                     break;
 
                 default:
@@ -206,8 +198,8 @@ public class Two4You {
                     //FRIES ADDING
                     secondItemName = "Medium fries";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
+
                     break;
 
 
@@ -215,8 +207,8 @@ public class Two4You {
                     //COCA-COLA ADDING
                     secondItemName = "Coca-Cola 400ml";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
+
                     break;
 
 
@@ -224,33 +216,31 @@ public class Two4You {
                     //Coca-Cola Zero ADDING
                     secondItemName = "Coca-Cola Zero 400ml";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
+
                     break;
 
                 case 4:
                     //FANTA ADDING
                     secondItemName = "Fanta 400ml";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
+
                     break;
 
                 case 5:
                     //SPRITE ADDING
                     secondItemName = "Sprite 400ml";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
+                    printYourTwo4You(fullName,cost);
+
                     break;
 
                 case 6:
                     //ICE TEA ADDING
                     secondItemName = "Ice Tea 400ml";
                     fullName = firstItemName + " + " + secondItemName;
-                    System.out.println("\nYour Two4You includes:");
-                    System.out.printf(fullName + " - %.2f PLN", cost);
-                    System.out.println("\n");
+                    printYourTwo4You(fullName,cost);
                     break;
 
                 default:
@@ -266,7 +256,6 @@ public class Two4You {
     static void two4YouFinalization(String fullName, double cost) {
 
         System.out.println("Do you want to change your Two4You components? Y/N");
-        System.out.print("\nEnter selected: ");
 
         String choice = MyScanner.myLineScanner();
 
@@ -291,10 +280,16 @@ public class Two4You {
         }
     }
 
+   private static void printYourTwo4You (String fullName, double cost) {
+       System.out.println("\nYour Two4You includes:");
+       System.out.printf(fullName + " - %.2f PLN", cost);
+    }
+
     @Override
     public String toString() {
 
-        return name +
+        return "Two4You - " +
+                name +
                 " - " +
                 String.format("%.2f", price)
                 + " PLN"

@@ -52,7 +52,7 @@ public class Coffees {
         System.out.println("\nCoffees menu:\n");
         MyPrinter.productListPrinter(coffeesList);
         System.out.println("\n8.Back");
-        System.out.println("9.Finalize order");
+        System.out.println("9.Finalize order\n");
     }
 
 

@@ -48,7 +48,7 @@ public class Wraps {
         System.out.println("\nWraps menu:\n");
         MyPrinter.productListPrinter(wrapsList);
         System.out.println("\n5.Back");
-        System.out.println("6.Finalize order");
+        System.out.println("6.Finalize order\n");
     }
 
 

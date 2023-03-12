@@ -9,17 +9,19 @@ import Interfaces.Other.getValidNumber;
 import Operating_System.SystemStart;
 import Products.Burger;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class AddBurgerToCart implements getValidNumber{
-    public static void addBurgerToCart() {
 
-        int sizeOfBurgerMenu = Burger.getBurgerList().size();
-        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "burger", sizeOfBurgerMenu+2)-1;
+        public static void addBurgerToCart() {
+
+        int sizeOfBurgerMenu = Burger.getBurgerList().size() + 2;
         //adding 2 to listSize - finalization option and back option.
+        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "burger", sizeOfBurgerMenu) - 1;
 
-        if (choice == 11) { SystemStart.Start(); }
-        if (choice == 12) { Finalization.finalizationOfOrder(); }
+        if (choice == 11) { SystemStart.Start();}
+        else if (choice == 12) { Finalization.finalizationOfOrder();}
 
         else {
             Burger selectedBurger = Burger.getBurgerList().get(choice);

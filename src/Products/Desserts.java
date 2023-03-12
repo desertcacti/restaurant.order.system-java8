@@ -63,7 +63,7 @@ public class Desserts {
 
     public static void displayPreDessertMenu() {
 
-        System.out.println("\nOur desserts menu:\n\n1.Desserts\n2.Ice creams\n3.McFlurry\n\n4.Back");
+        System.out.println("\nOur desserts menu:\n\n1.Desserts\n2.Ice creams\n3.McFlurry\n\n4.Back\n");
     }
 
 

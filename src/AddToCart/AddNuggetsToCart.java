@@ -11,18 +11,19 @@ import Products.Nuggets;
 public class AddNuggetsToCart {
     public static void addNuggetsToCart() {
 
-        int sizeOfNuggetsMenu = Nuggets.getNuggetsList().size();
-        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "nuggets", sizeOfNuggetsMenu+2)-1;
+        int sizeOfNuggetsMenu = Nuggets.getNuggetsList().size()+2;
         //adding 2 to listSize - finalization option and back option.
+        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "nuggets", sizeOfNuggetsMenu)-1;
 
         if (choice == 6) { SystemStart.Start(); }
-        if (choice == 7) { Finalization.finalizationOfOrder(); }
+        else if (choice == 7) { Finalization.finalizationOfOrder(); }
 
         else {
             Nuggets selectedNuggets = Nuggets.getNuggetsList().get(choice);
             double price = Nuggets.getNuggetsList().get(choice).getPrice();
             addSelectedNuggetsToCart(selectedNuggets, price);
             System.out.printf("\n%.2f PLN added to bill.\n", price);
+            addNuggetsToCart();
         }
     }
 

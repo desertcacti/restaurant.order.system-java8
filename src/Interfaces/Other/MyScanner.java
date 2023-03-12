@@ -6,6 +6,8 @@ public interface MyScanner {
 
     Scanner scanner  = new Scanner(System.in);
 
+
+
     static int myIntScanner() {
         return scanner.nextInt();
     }

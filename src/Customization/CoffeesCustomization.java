@@ -19,7 +19,7 @@ public class CoffeesCustomization {
 
     public static void coffeesCustomization() {
 
-        System.out.println("\nDo you want to customize selected item? Y/N");
+        System.out.println("Do you want to customize selected item? Y/N");
         String choice = MyScanner.getNewInstance().nextLine();
 
         switch(choice) {
@@ -44,25 +44,20 @@ public class CoffeesCustomization {
 
     static void yesChosen() {
 
-        System.out.println("Select addition you want to add to coffee: ");
-//        int choice = MyScanner.myIntScanner();
-        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance());
 
-//        if (choice < 1 || choice > 8) {
-//            System.out.println("Please try again...");
-//            yesChosen();
-//        } else {
+        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance(),8, "coffee");
+
 
             switch (choice) {
 
                 case 1:
                     if(flag1 == 1) {
-                        System.out.println("Addition has already been added once");
+                        System.out.println("\nAddition has already been added once");
                         yesChosen();
                         break;
                     } if (flag1 == 0) {
                     CartList.addToCartValue(0.20);
-                    System.out.println("0.20 PLN added to bill");
+                    System.out.println("\n0.20 PLN added to bill");
                     flag1 = 1;
                     yesChosen();
                     break;
@@ -72,12 +67,12 @@ public class CoffeesCustomization {
                 case 2:
 
                     if(flag2 == 1) {
-                        System.out.println("Addition has already been added once");
+                        System.out.println("\nAddition has already been added once");
                         yesChosen();
                         break;
                     } if (flag2 == 0) {
                     CartList.addToCartValue(0.20);
-                    System.out.println("0.20 PLN added to bill");
+                    System.out.println("\n0.20 PLN added to bill");
                     flag2 = 1;
                     yesChosen();
                     break;
@@ -87,12 +82,12 @@ public class CoffeesCustomization {
                 case 3:
 
                     if(flag3 == 1) {
-                        System.out.println("Addition has already been added once");
+                        System.out.println("\nAddition has already been added once");
                         yesChosen();
                         break;
                     } if (flag3 == 0) {
                     CartList.addToCartValue(0.20);
-                    System.out.println("0.20 PLN added to bill");
+                    System.out.println("\n0.20 PLN added to bill");
                     flag3 = 1;
                     yesChosen();
                     break;
@@ -101,12 +96,12 @@ public class CoffeesCustomization {
 
                 case 4:
                     if(flag4 == 1) {
-                        System.out.println("Addition has already been added once");
+                        System.out.println("\nAddition has already been added once");
                         yesChosen();
                         break;
                     } if (flag4 == 0) {
                     CartList.addToCartValue(2.00);
-                    System.out.println("2.00 PLN added to bill");
+                    System.out.println("\n2.00 PLN added to bill");
                     flag4 = 1;
                     yesChosen();
                     break;
@@ -115,12 +110,12 @@ public class CoffeesCustomization {
 
                 case 5:
                     if(flag5 == 1) {
-                        System.out.println("Addition has already been added once");
+                        System.out.println("\nAddition has already been added once");
                         yesChosen();
                         break;
                     } if (flag5 == 0) {
                     CartList.addToCartValue(1.50);
-                    System.out.println("1.50 PLN added to bill");
+                    System.out.println("\n1.50 PLN added to bill");
                     flag5 = 1;
                     yesChosen();
                     break;
@@ -129,12 +124,12 @@ public class CoffeesCustomization {
 
                 case 6:
                     if(flag6 == 1) {
-                        System.out.println("Addition has already been added once");
+                        System.out.println("\nAddition has already been added once");
                         yesChosen();
                         break;
                     } if (flag6 == 0) {
                     CartList.addToCartValue(1.50);
-                    System.out.println("1.50 PLN added to bill");
+                    System.out.println("\n1.50 PLN added to bill");
                     flag6 = 1;
                     yesChosen();
                     break;
@@ -143,12 +138,12 @@ public class CoffeesCustomization {
 
                 case 7:
                     if(flag7 == 1) {
-                        System.out.println("Addition has already been added once");
+                        System.out.println("\nAddition has already been added once");
                         yesChosen();
                         break;
                     } if (flag7 == 0) {
                     CartList.addToCartValue(1.50);
-                    System.out.println("1.50 PLN added to bill");
+                    System.out.println("\n1.50 PLN added to bill");
                     flag7 = 1;
                     yesChosen();
                     break;
@@ -168,8 +163,8 @@ public class CoffeesCustomization {
 
     static void displayCoffeesAdditions() {
 
-        System.out.println("1.White sugar - 0.20 PLN\n2.Sugar Cane - 0.20 PLN\n3.Sweetener - 0.20 PLN\n4.Extra espresso - 2.00 PLN" +
-                "\n5.Caramel syrup - 1.50 PLN\n6.Vanilla syrup - 1.50 PLN\n7.Season syrup - 1.50 PLN\n\n8.End customization");
+        System.out.println("Additions:\n\n1.White sugar - 0.20 PLN\n2.Sugar Cane - 0.20 PLN\n3.Sweetener - 0.20 PLN\n4.Extra espresso - 2.00 PLN" +
+                "\n5.Caramel syrup - 1.50 PLN\n6.Vanilla syrup - 1.50 PLN\n7.Season syrup - 1.50 PLN\n\n8.End customization\n");
 
 
     }

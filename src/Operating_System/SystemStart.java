@@ -3,6 +3,7 @@ import AddToCart.*;
 import FinalizationOrder.Finalization;
 import Interfaces.Other.*;
 import Products.*;
+import Sets.Sets;
 import Two4You.Two4You;
 
 public class SystemStart implements getValidNumber {
@@ -10,15 +11,13 @@ public class SystemStart implements getValidNumber {
 
         System.out.println("\nWelcome in McRonald!\n");
         Menu_Display.displayMenu();
-
-        int choice = getValidNumber.getValidNumberSystemStart(MyScanner.getNewInstance(), 12);
+        int choice = getValidNumber.getValidNumber(MyScanner.getNewInstance(), 12);
 
         switch (choice) {
 
             case 1:
                 Burger.displayBurgerMenu();
                 AddBurgerToCart.addBurgerToCart();
-
 
                 break;
 
@@ -69,7 +68,7 @@ public class SystemStart implements getValidNumber {
                 break;
 
             case 10:
-
+                Sets.setsStart();
 
                 break;
 

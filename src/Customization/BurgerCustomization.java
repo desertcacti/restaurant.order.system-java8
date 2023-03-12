@@ -32,31 +32,22 @@ public class BurgerCustomization implements getValidNumber {
 
 
             case "N":
-                System.out.print("\n");
                 AddBurgerToCart.addBurgerToCart();
                 break;
 
             default:
-                System.out.println("\nPlease try again...");
+                System.out.println("Please try again...");
                 burgerCustomization();
                 break;
 
         }
 
-        MyScanner.getNewInstance().close();
+
     }
 
     public static void yesChosen() {
 
-        System.out.print("Select addition you want to add to burger: ");
-        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance());
-
-//
-//        if (choice < 1 || choice > 7) {
-//            System.out.println("\nPlease try again...");
-//            yesChosen();
-//
-//        } else {
+        int choice = getValidNumber.getValidNumberCustomization(MyScanner.getNewInstance(),7, "burger");
 
             switch (choice) {
 

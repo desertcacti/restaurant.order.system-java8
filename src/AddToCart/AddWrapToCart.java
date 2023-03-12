@@ -13,12 +13,12 @@ public class AddWrapToCart {
 
     public static void addWrapToCart() {
 
-        int sizeOfWrapsMenu = Wraps.getWrapsList().size();
-        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "wrap", sizeOfWrapsMenu+2)-1;
+        int sizeOfWrapsMenu = Wraps.getWrapsList().size()+2;
         //adding 2 to listSize - finalization option and back option.
+        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "wrap", sizeOfWrapsMenu)-1;
 
         if (choice == 4) { SystemStart.Start(); }
-        if (choice == 5) { Finalization.finalizationOfOrder(); }
+        else if (choice == 5) { Finalization.finalizationOfOrder(); }
 
         else {
             Wraps selectedWraps = Wraps.getWrapsList().get(choice);

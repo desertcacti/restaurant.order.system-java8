@@ -13,12 +13,12 @@ import Products.Coffees;
 public class AddCoffeesToCart {
     public static void addCoffeesToCart() {
 
-        int sizeOfCoffeesMenu = Coffees.getCoffeesList().size();
-        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "coffee", sizeOfCoffeesMenu + 2) - 1;
+        int sizeOfCoffeesMenu = Coffees.getCoffeesList().size()+2;
         //adding 2 to listSize - finalization option and back option.
+        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "coffee", sizeOfCoffeesMenu) - 1;
 
         if (choice == 7) { SystemStart.Start(); }
-        if (choice == 8) { Finalization.finalizationOfOrder();}
+        else if (choice == 8) { Finalization.finalizationOfOrder();}
 
         else {
             Coffees selectedCoffee = Coffees.getCoffeesList().get(choice);

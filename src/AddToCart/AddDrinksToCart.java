@@ -13,9 +13,9 @@ import Products.Drinks;
 public class AddDrinksToCart {
    public static void addDrinksToCart() {
 
-        int sizeOfDrinksMenu = Drinks.getDrinksList().size();
-        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(),"drinks", sizeOfDrinksMenu+2)-1;
+        int sizeOfDrinksMenu = Drinks.getDrinksList().size()+2;
        //adding 2 to listSize - finalization option and back option.
+       int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(),"drinks", sizeOfDrinksMenu)-1;
 
        if (choice == 11) { SystemStart.Start();}
        else if (choice == 12) { Finalization.finalizationOfOrder();}
