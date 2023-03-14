@@ -1,9 +1,9 @@
 package Customization;
 
-import FinalizationOrder.CartList;
+import Finalization.CartList;
 import AddToCart.AddDessertsToCart;
-import Interfaces.Other.MyScanner;
-import Interfaces.Other.getValidNumber;
+import Interfaces.MyScanner;
+import Interfaces.getValidNumber;
 import Products.Desserts;
 
 public class DessertsCustomization {

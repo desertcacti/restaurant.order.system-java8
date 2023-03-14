@@ -1,9 +1,8 @@
 package Products;
-import Interfaces.Other.MyPrinter;
+import Interfaces.MyPrinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 
 public class Burger  {

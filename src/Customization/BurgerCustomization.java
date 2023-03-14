@@ -1,12 +1,10 @@
 package Customization;
 
-import FinalizationOrder.CartList;
+import Finalization.CartList;
 import AddToCart.AddBurgerToCart;
-import Interfaces.Other.MyScanner;
-import Interfaces.Other.getValidNumber;
+import Interfaces.MyScanner;
+import Interfaces.getValidNumber;
 import Products.Burger;
-
-import java.util.Scanner;
 
 public class BurgerCustomization implements getValidNumber {
 

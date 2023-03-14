@@ -1,12 +1,11 @@
 package AddToCart;
 
 import Customization.WrapsCustomization;
-import FinalizationOrder.CartList;
-import FinalizationOrder.Finalization;
-import Interfaces.Other.MyScanner;
-import Interfaces.Other.getValidNumber;
-import Operating_System.SystemStart;
-import Products.Wraps;
+import Finalization.CartList;
+import Finalization.Finalization;
+import Interfaces.MyScanner;
+import Interfaces.getValidNumber;
+import OperatingSystem.SystemStart;
 import Products.Wraps;
 
 public class AddWrapToCart {

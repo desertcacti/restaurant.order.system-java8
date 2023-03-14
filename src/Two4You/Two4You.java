@@ -1,13 +1,10 @@
 package Two4You;
 
-import FinalizationOrder.CartList;
-import FinalizationOrder.Finalization;
-import Interfaces.Other.MyScanner;
-import Interfaces.Other.getValidNumber;
-import Operating_System.SystemStart;
-
-import java.io.IOException;
-import java.util.InputMismatchException;
+import Finalization.CartList;
+import Finalization.Finalization;
+import Interfaces.MyScanner;
+import Interfaces.getValidNumber;
+import OperatingSystem.SystemStart;
 
 public class Two4You {
     private static final double basicPrice = 7.90;
@@ -48,7 +45,7 @@ public class Two4You {
         System.out.println("\nOur Two4You menu:\n");
         displayMainTwo4YouMenuView();
 
-            int choice = getValidNumber.getValidNumber(MyScanner.getNewInstance(), 7);
+            int choice = getValidNumber.getValidNumberMain(MyScanner.getNewInstance(), 7);
             System.out.print("\n");
 
             switch (choice) {
@@ -134,7 +131,7 @@ public class Two4You {
         if (isBasicVersion) {
             //FOR BASIC
 
-            int choice = getValidNumber.getValidNumber(MyScanner.getNewInstance(),6);
+            int choice = getValidNumber.getValidNumberMain(MyScanner.getNewInstance(),6);
 
             switch (choice) {
 
@@ -267,7 +264,7 @@ public class Two4You {
 
             case "N":
                 CartList.addToCartValue(cost);
-                System.out.printf("\n%.2f PLN added to bill\n", cost);
+                System.out.printf("\n%.2f PLN added to bill.\n", cost);
                 Two4You obj = new Two4You(fullName, cost);
                 CartList.addToCartList(obj);
                 Two4You.two4YouMethod();

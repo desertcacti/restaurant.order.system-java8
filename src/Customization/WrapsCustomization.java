@@ -1,9 +1,9 @@
 package Customization;
 
-import FinalizationOrder.CartList;
+import Finalization.CartList;
 import AddToCart.AddWrapToCart;
-import Interfaces.Other.MyScanner;
-import Interfaces.Other.getValidNumber;
+import Interfaces.MyScanner;
+import Interfaces.getValidNumber;
 import Products.Wraps;
 
 public class WrapsCustomization {

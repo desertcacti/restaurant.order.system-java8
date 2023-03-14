@@ -1,11 +1,9 @@
-package Interfaces.Other;
+package Interfaces;
 
-import FinalizationOrder.CartList;
-import Operating_System.SystemStart;
+import Finalization.CartList;
+import OperatingSystem.SystemStart;
 
 public interface Farewell {
-
-
     static void farewell() {
         if (!CartList.getCartList().isEmpty()) {
             System.out.println("You have items in your Cart. Are you sure you want exit? Y/N");
@@ -23,10 +21,9 @@ public interface Farewell {
                 default:
                     farewell();
                     break;
-
             }
         } else {
-            System.out.println("Thank you for visiting us!");
+            System.out.println("\nThank you for visiting us!");
         }
     }
 }

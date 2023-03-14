@@ -1,13 +1,11 @@
 package AddToCart;
 
-import Customization.BurgerCustomization;
 import Customization.CoffeesCustomization;
-import FinalizationOrder.CartList;
-import FinalizationOrder.Finalization;
-import Interfaces.Other.MyScanner;
-import Interfaces.Other.getValidNumber;
-import Operating_System.SystemStart;
-import Products.Burger;
+import Finalization.CartList;
+import Finalization.Finalization;
+import Interfaces.MyScanner;
+import Interfaces.getValidNumber;
+import OperatingSystem.SystemStart;
 import Products.Coffees;
 
 public class AddCoffeesToCart {

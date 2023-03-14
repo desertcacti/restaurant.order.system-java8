@@ -1,11 +1,10 @@
 package AddToCart;
 
-import FinalizationOrder.CartList;
-import FinalizationOrder.Finalization;
-import Interfaces.Other.MyScanner;
-import Interfaces.Other.getValidNumber;
-import Operating_System.SystemStart;
-import Products.Fries;
+import Finalization.CartList;
+import Finalization.Finalization;
+import Interfaces.MyScanner;
+import Interfaces.getValidNumber;
+import OperatingSystem.SystemStart;
 import Products.Fries;
 
 public class AddFriesToCart {
