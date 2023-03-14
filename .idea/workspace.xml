@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Save new version">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Finalization/CartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finalization/CartList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OperatingSystem/SystemStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OperatingSystem/SystemStart.java" afterDir="false" />
+    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Improved methods.">
       <change beforePath="$PROJECT_DIR$/src/SpecialOffers/SpecialOffers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialOffers/SpecialOffers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678803013669</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Improved methods.">
+      <created>1678819095118</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1678819095118</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,7 +229,8 @@
     <MESSAGE value="Added new option/functionality in menu." />
     <MESSAGE value="Simplifying some methods. Added logic to addingToCart methods." />
     <MESSAGE value="Save new version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save new version" />
+    <MESSAGE value="Improved methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved methods." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

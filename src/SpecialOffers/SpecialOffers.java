@@ -10,19 +10,18 @@ import Finalization.CartList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Random;
 
 public class SpecialOffers {
     private String name;
     private double price;
-
     static int counterOpened = 0;
 
     public SpecialOffers(String name, double price) {
         this.name = name;
         this.price = price;
     }
-
     private static final ArrayList<SpecialOffers> mainItemsList = new ArrayList<>(Arrays.asList(
             new SpecialOffers("Jalapeno Burger", 6.50),
             new SpecialOffers("Hamburger", 5.90),
@@ -312,7 +311,8 @@ public class SpecialOffers {
         System.out.println("\nSpecial offers menu:\n");
 
         for(SpecialOffers s : specialOffersList) {
-            System.out.println(enumeration + ". " + s.getName());
+            System.out.println(enumeration + ". " + s.getName() + " - " + String.format("%.2f", s.getPrice()) + " PLN");
+
             enumeration++;
         }
 
@@ -327,6 +327,21 @@ public class SpecialOffers {
     @Override
     public String toString() {
         return "Spec.Offer - " + name + " - " + String.format("%.2f PLN", price);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (obj == this) return true;
+        if (obj.getClass() != getClass()) return false;
+        SpecialOffers other = (SpecialOffers) obj;
+        return name.equals(other.name) && price == other.price;
+    }
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price);
     }
 
 
