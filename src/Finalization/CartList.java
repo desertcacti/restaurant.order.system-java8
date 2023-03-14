@@ -40,6 +40,11 @@ public class CartList {
        cartValue += price;
     }
 
+    public static void addToCart(Object o, double price) {
+        cartList.add(o);
+        cartValue += price;
+    }
+
 
     public static  double getCartValue() {
         return cartValue;
@@ -49,9 +54,9 @@ public class CartList {
         return cartList;
     }
 
-    public static void addToCartList(Object e) {
+    public static void addToCartList(Object o) {
 
-        cartList.add(e);
+        cartList.add(o);
     }
 
 

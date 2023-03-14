@@ -1,25 +1,28 @@
 package SpecialOffers;
 
+import Finalization.Finalization;
+import Interfaces.MyScanner;
 import Interfaces.getRandomElement;
+import OperatingSystem.SystemStart;
 import Products.*;
+import Interfaces.getValidNumber;
+import Finalization.CartList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
 public class SpecialOffers {
-
-    public static void main(String[] args) {
-
-
-    }
     private String name;
     private double price;
+
+    static int counterOpened = 0;
 
     public SpecialOffers(String name, double price) {
         this.name = name;
         this.price = price;
     }
+
     private static final ArrayList<SpecialOffers> mainItemsList = new ArrayList<>(Arrays.asList(
             new SpecialOffers("Jalapeno Burger", 6.50),
             new SpecialOffers("Hamburger", 5.90),
@@ -44,7 +47,7 @@ public class SpecialOffers {
             new SpecialOffers("McWrap Supreme Chicken Sweet & Spicy", 22.70)));
 
 
-    private static ArrayList<SpecialOffers> specialOffersList = new ArrayList<>();
+    private final static ArrayList<SpecialOffers> specialOffersList = new ArrayList<>();
 
 
 
@@ -60,78 +63,117 @@ public class SpecialOffers {
 
     public static void specialOffersStart() {
 
-        Random random = new Random();
 
-        for(int i = 0; i <= 8; i++) {
+        if (counterOpened == 0) {
 
-            int randomNumber = random.nextInt(12); // generates a random number between 0 and 11
+            Random random = new Random();
 
-            switch (randomNumber) {
+            for (int i = 0; i <= 7; i++) {
 
-                case 0:
-                    SpecialOffers obj1 = firstVariant();
-                    specialOffersList.add(obj1);
-                    break;
+                int randomNumber = random.nextInt(12); // generates a random number between 0 and 11
 
-                case 1:
-                    SpecialOffers obj2 = secondVariant();
-                    specialOffersList.add(obj2);
-                    break;
+                switch (randomNumber) {
 
-                case 2:
-                    SpecialOffers obj3 = thirdVariant();
-                    specialOffersList.add(obj3);
-                    break;
+                    case 0:
+                        SpecialOffers obj1 = firstVariant();
+                        specialOffersList.add(obj1);
+                        break;
 
-                case 3:
-                    SpecialOffers obj4 = fourthVariant();
-                    specialOffersList.add(obj4);
-                    break;
+                    case 1:
+                        SpecialOffers obj2 = secondVariant();
+                        specialOffersList.add(obj2);
+                        break;
 
-                case 4:
-                    SpecialOffers obj5 = fifthVariant();
-                    specialOffersList.add(obj5);
-                    break;
+                    case 2:
+                        SpecialOffers obj3 = thirdVariant();
+                        specialOffersList.add(obj3);
+                        break;
 
-                case 5:
-                    SpecialOffers obj6 = sixthVariant();
-                    specialOffersList.add(obj6);
-                    break;
+                    case 3:
+                        SpecialOffers obj4 = fourthVariant();
+                        specialOffersList.add(obj4);
+                        break;
 
-                case 6:
-                    SpecialOffers obj7 = seventhVariant();
-                    specialOffersList.add(obj7);
-                    break;
+                    case 4:
+                        SpecialOffers obj5 = fifthVariant();
+                        specialOffersList.add(obj5);
+                        break;
 
-                case 7:
-                    SpecialOffers obj8 = eighthVariant();
-                    specialOffersList.add(obj8);
-                    break;
+                    case 5:
+                        SpecialOffers obj6 = sixthVariant();
+                        specialOffersList.add(obj6);
+                        break;
 
-                case 8:
-                    SpecialOffers obj9 = ninthVariant();
-                    specialOffersList.add(obj9);
-                    break;
+                    case 6:
+                        SpecialOffers obj7 = seventhVariant();
+                        specialOffersList.add(obj7);
+                        break;
 
-                case 9:
-                    SpecialOffers obj10 = tenthVariant();
-                    specialOffersList.add(obj10);
-                    break;
+                    case 7:
+                        SpecialOffers obj8 = eighthVariant();
+                        specialOffersList.add(obj8);
+                        break;
 
-                case 10:
-                    SpecialOffers obj11 = eleventhVariant();
-                    specialOffersList.add(obj11);
-                    break;
+                    case 8:
+                        SpecialOffers obj9 = ninthVariant();
+                        specialOffersList.add(obj9);
+                        break;
 
-                case 11:
-                    SpecialOffers obj12 = twelfthVariant();
-                    specialOffersList.add(obj12);
-                    break;
+                    case 9:
+                        SpecialOffers obj10 = tenthVariant();
+                        specialOffersList.add(obj10);
+                        break;
+
+                    case 10:
+                        SpecialOffers obj11 = eleventhVariant();
+                        specialOffersList.add(obj11);
+                        break;
+
+                    case 11:
+                        SpecialOffers obj12 = twelfthVariant();
+                        specialOffersList.add(obj12);
+                        break;
+                }
             }
+            counterOpened++;
+            displaySpecialOffersList();
+            finalizationOfSpecialOffers();
+        } else {
+            displaySpecialOffersList();
+           finalizationOfSpecialOffers();
         }
     }
 
-    public static SpecialOffers firstVariant() {
+
+    private static void finalizationOfSpecialOffers() {
+
+
+
+        int choice = getValidNumber.getValidNumberMain(MyScanner.getNewInstance(), 10)-1;
+
+        switch(choice) {
+
+            case 0,1,2,3,4,5,6,7:
+                SpecialOffers specialOffersChosen = getSpecialOffersList().get(choice);
+                double selectedItemPrice = specialOffersChosen.getPrice();
+                CartList.addToCart(specialOffersChosen, selectedItemPrice);
+                System.out.printf("\n%.2f PLN added to bill.\n", selectedItemPrice);
+                finalizationOfSpecialOffers();
+                break;
+
+            case 8:
+                SystemStart.Start();
+                break;
+
+            case 9:
+                Finalization.finalizationOfOrder();
+                break;
+
+        }
+    }
+
+
+    private static SpecialOffers firstVariant() {
         //MAIN + DRINK + FRIES
         SpecialOffers firstObject = getRandomElement.getRandomElement(mainItemsList);
         Drinks randomDrink = getRandomElement.getRandomElement(Drinks.getDrinksList());
@@ -144,7 +186,7 @@ public class SpecialOffers {
     }
 
 
-    public static SpecialOffers secondVariant() {
+    private static SpecialOffers secondVariant() {
         //MAIN + DRINK
         SpecialOffers firstObject = getRandomElement.getRandomElement(mainItemsList);
         Drinks randomDrink = getRandomElement.getRandomElement(Drinks.getDrinksList());
@@ -155,7 +197,7 @@ public class SpecialOffers {
         return new SpecialOffers(fullName,fullPrice);
     }
 
-    public static SpecialOffers thirdVariant() {
+    private static SpecialOffers thirdVariant() {
         //MAIN
         SpecialOffers firstObject = getRandomElement.getRandomElement(mainItemsList);
 
@@ -165,7 +207,7 @@ public class SpecialOffers {
         return new SpecialOffers(fullName,fullPrice);
     }
 
-    public static SpecialOffers fourthVariant() {
+    private static SpecialOffers fourthVariant() {
         //MAIN x 2
         SpecialOffers firstObject = getRandomElement.getRandomElement(mainItemsList);
 
@@ -175,7 +217,7 @@ public class SpecialOffers {
         return new SpecialOffers(fullName,fullPrice);
     }
 
-    public static SpecialOffers fifthVariant() {
+    private static SpecialOffers fifthVariant() {
         //FRIES x 2
         Fries randomFries = getRandomElement.getRandomElement(Fries.getFriesList());
 
@@ -185,7 +227,7 @@ public class SpecialOffers {
         return new SpecialOffers(fullName,fullPrice);
     }
 
-    public static SpecialOffers sixthVariant() {
+    private static SpecialOffers sixthVariant() {
         //COFFEES x 2
         Coffees randomCoffee = getRandomElement.getRandomElement(Coffees.getCoffeesList());
 
@@ -195,7 +237,7 @@ public class SpecialOffers {
         return new SpecialOffers(fullName,fullPrice);
     }
 
-    public static SpecialOffers seventhVariant() {
+    private static SpecialOffers seventhVariant() {
         //ICE CREAMS x 2
         Desserts randomIceCream = getRandomElement.getRandomElement(Desserts.getIceCreamsList());
 
@@ -205,7 +247,7 @@ public class SpecialOffers {
         return new SpecialOffers(fullName,fullPrice);
     }
 
-    public static SpecialOffers eighthVariant() {
+    private static SpecialOffers eighthVariant() {
         //DESSERT + COFFEE
         Desserts randomDessert = getRandomElement.getRandomElement(Desserts.getDessertsList());
         Coffees randomCoffee = getRandomElement.getRandomElement(Coffees.getCoffeesList());
@@ -217,7 +259,7 @@ public class SpecialOffers {
 
     }
 
-    public static SpecialOffers ninthVariant() {
+    private static SpecialOffers ninthVariant() {
         //MAIN x 2 + FRIES x 2
         SpecialOffers firstObject = getRandomElement.getRandomElement(mainItemsList);
         Fries firstFries = getRandomElement.getRandomElement(Fries.getFriesList());
@@ -228,7 +270,7 @@ public class SpecialOffers {
         return new SpecialOffers(fullName,fullPrice);
     }
 
-    public static SpecialOffers tenthVariant() {
+    private static SpecialOffers tenthVariant() {
         //THE SAME MAIN x 2 + FRIES x 1
         SpecialOffers firstObject = getRandomElement.getRandomElement(mainItemsList);
         Fries firstFries = getRandomElement.getRandomElement(Fries.getFriesList());
@@ -240,7 +282,7 @@ public class SpecialOffers {
 
     }
 
-    public static SpecialOffers eleventhVariant() {
+    private static SpecialOffers eleventhVariant() {
         //DIFFERENT MAIN x 2 + FRIES x 1
         SpecialOffers firstObject = getRandomElement.getRandomElement(mainItemsList);
         SpecialOffers secondObject = getRandomElement.getRandomElement(mainItemsList);
@@ -253,7 +295,7 @@ public class SpecialOffers {
 
     }
 
-    public static SpecialOffers twelfthVariant() {
+    private static SpecialOffers twelfthVariant() {
         //BIG FRIES / HALF-PRICE
         Fries firstFries = getRandomElement.getRandomElement(Fries.getFriesList());
 
@@ -261,6 +303,30 @@ public class SpecialOffers {
         double fullPrice = (firstFries.getPrice() * 0.5);
 
         return new SpecialOffers(fullName,fullPrice);
+    }
+
+    public static void displaySpecialOffersList() {
+
+        int enumeration = 1;
+
+        System.out.println("\nSpecial offers menu:\n");
+
+        for(SpecialOffers s : specialOffersList) {
+            System.out.println(enumeration + ". " + s.getName());
+            enumeration++;
+        }
+
+        System.out.println("\n9.Back\n10.Finalize order\n");
+
+    }
+
+    public static ArrayList<SpecialOffers> getSpecialOffersList() {
+        return specialOffersList;
+    }
+
+    @Override
+    public String toString() {
+        return "Spec.Offer - " + name + " - " + String.format("%.2f PLN", price);
     }
 
 
