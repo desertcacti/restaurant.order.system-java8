@@ -19,6 +19,14 @@ public class Two4You {
         this.price = price;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     static void displayMainTwo4YouMenuView() {
 
         System.out.println("1.Hamburger" +
@@ -252,6 +260,8 @@ public class Two4You {
 
     static void two4YouFinalization(String fullName, double cost) {
 
+
+
         System.out.println("Do you want to change your Two4You components? Y/N");
 
         String choice = MyScanner.myLineScanner();
@@ -263,11 +273,12 @@ public class Two4You {
                 break;
 
             case "N":
-                CartList.addToCartValue(cost);
-                System.out.printf("\n%.2f PLN added to bill.\n", cost);
                 Two4You obj = new Two4You(fullName, cost);
-                CartList.addToCartList(obj);
+                double price = obj.getPrice();
+                CartList.addToCart(obj, price);
+                System.out.printf("\n%.2f PLN added to bill.\n", cost);
                 Two4You.two4YouMethod();
+
                 break;
 
             default:
@@ -281,6 +292,7 @@ public class Two4You {
        System.out.println("\nYour Two4You includes:");
        System.out.printf(fullName + " - %.2f PLN", cost);
     }
+
 
     @Override
     public String toString() {
