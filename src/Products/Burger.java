@@ -55,8 +55,8 @@ public class Burger  {
     @Override
     public String toString() {
 
-        return name +
-                " - " +
+        return name
+                + " - " +
                 String.format("%.2f", price)
                 + " PLN"
                 ;

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Improved methods.">
-      <change beforePath="$PROJECT_DIR$/src/SpecialOffers/SpecialOffers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialOffers/SpecialOffers.java" afterDir="false" />
+    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Added equals/hashcode to Special Offers.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Finalization/CartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finalization/CartList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Finalization/Finalization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finalization/Finalization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Burger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Two4You/Two4You.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Two4You/Two4You.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +56,7 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.StartApp">
     <configuration name="StartApp" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -61,6 +66,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Test.Test" />
+      <module name="Restaurant_Order_System_v1.1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.StartApp" />
+      <item itemvalue="Application.Test" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -197,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678819095118</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added equals/hashcode to Special Offers.">
+      <created>1678822063155</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678822063155</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,7 +253,9 @@
     <MESSAGE value="Simplifying some methods. Added logic to addingToCart methods." />
     <MESSAGE value="Save new version" />
     <MESSAGE value="Improved methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved methods." />
+    <MESSAGE value="Added equals/hascode to Speccial Offers." />
+    <MESSAGE value="Added equals/hashcode to Special Offers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added equals/hashcode to Special Offers." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -247,6 +272,11 @@
           <properties class="java.lang.IllegalArgumentException" package="java.lang" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Finalization/Finalization.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
