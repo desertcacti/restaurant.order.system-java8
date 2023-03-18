@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Amend">
-      <change afterPath="$PROJECT_DIR$/src/Test/Test.java" afterDir="false" />
+    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Modify Cart display part2.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Finalization/CartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finalization/CartList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Finalization/Finalization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finalization/Finalization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/getValidNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/getValidNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OperatingSystem/SystemStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OperatingSystem/SystemStart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678916223221</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Modify Cart display part2.">
+      <created>1678977588146</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1678977588146</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,7 +317,8 @@
     <MESSAGE value="Added equals/hashcode to Special Offers." />
     <MESSAGE value="Modify Cart display" />
     <MESSAGE value="Amend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Amend" />
+    <MESSAGE value="Modify Cart display part2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify Cart display part2." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -99,7 +99,7 @@ public class SystemStart implements getValidNumber {
 
 
     static void displayMenu () {
-        System.out.println("1.Burgers\n2.Wraps\n3.Fries\n4.Nuggets\n5.Drinks\n6.Coffee\n7.Desserts\n8.Extras\n9.Two4You\n10.Sets\n11.Special Offers\n\n12.Finalization\n13.Exit\n");
+        System.out.println("1.Burgers\n2.Wraps\n3.Fries\n4.Nuggets\n5.Drinks\n6.Coffees\n7.Desserts\n8.Extras\n9.Two4You\n10.Sets\n11.Special Offers\n\n12.Finalization\n13.Exit\n");
     }
 }
 

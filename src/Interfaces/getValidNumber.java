@@ -140,6 +140,8 @@ public interface getValidNumber {
 
     }
 
+
+
     static int getValidNumber(Scanner scanner, int maxRange) {
 
         int input = 0;
@@ -168,35 +170,6 @@ public interface getValidNumber {
 
     }
 
-//    static int getValidNumberTEST(Scanner scanner, int maxRange, boolean isValidInput) {
-//
-//        int input = 0;
-//        String userInput = scanner.nextLine().trim();
-//
-//        if (userInput.isEmpty()) {
-//            System.out.print("\nInvalid input. Please try again...\n");
-//
-//
-//        } else {
-//            try {
-//                input = Integer.parseInt(userInput);
-//
-//                if (input > 0 && input <= maxRange) {
-//                    return input;
-//
-//                } else {
-//                    System.out.print("\nInvalid input. Please try again...\n");
-//                    getValidNumber.getValidNumberTEST(scanner, maxRange);
-//                }
-//
-//            } catch (NumberFormatException e) {
-//                System.out.print("\nInvalid input.Please try again...\n");
-//                getValidNumber.getValidNumberTEST(scanner, maxRange);
-//            }
-//        }
-//        return input;
-//
-//    }
 
     static int getValidNumberInSets(Scanner scanner, int maxRange, String name) {
 
@@ -274,6 +247,41 @@ public interface getValidNumber {
         while (!validInput) {
             System.out.print("Select drink you want to add to your set: ");
 
+            String userInput = scanner.nextLine().trim();
+
+            if (userInput.isEmpty()) {
+                System.out.print("\nInvalid input. Please try again...\n");
+
+
+            } else {
+
+                try {
+                    input = Integer.parseInt(userInput);
+
+                    if (input > 0 && input <= maxRange) {
+
+                        validInput = true;
+                    } else {
+                        System.out.print("\nInvalid input. Please try again...\n");
+                    }
+
+                } catch (NumberFormatException e) {
+                    System.out.print("\nInvalid input.Please try again...\n");
+                }
+            }
+        }
+
+        return input;
+    }
+
+
+    static int getValidNumberCart(Scanner scanner, int maxRange) {
+
+        int input = 0;
+        boolean validInput = false;
+
+        while (!validInput) {
+            System.out.print("Enter quantity:");
             String userInput = scanner.nextLine().trim();
 
             if (userInput.isEmpty()) {
