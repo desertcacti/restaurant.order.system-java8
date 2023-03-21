@@ -274,8 +274,9 @@ public class Two4You {
 
             case "N":
                 Two4You obj = new Two4You(fullName, cost);
+                String name = obj.getName();
                 double price = obj.getPrice();
-                CartList.addToCart(obj, price);
+                CartList.addElementToCart(name, 1);
                 System.out.printf("\n%.2f PLN added to bill.\n", cost);
                 Two4You.two4YouMethod();
 

@@ -6,78 +6,62 @@ import OperatingSystem.SystemStart;
 import java.sql.SQLOutput;
 import java.util.*;
 public class CartList {
-    private static ArrayList<String> arrayListViewOfProductsInCart = new ArrayList<>();
-    private static ArrayList<Object> cartList = new ArrayList<>();
-    private static Map<String, Integer> cartMap = new LinkedHashMap<>();
-    private static double cartValue = 00.00;
 
-public static void changeArrayListToLinkedHashMap() {
+    private static double cartValue = 0.00;
+    private static Map<String, Map<Double, Integer>> cartFinal = new LinkedHashMap<>();
 
-    for (Object obj : cartList) {
+    public static Map getCartList () {
 
-        String name = obj.toString();
+        return cartFinal;
 
-        if (cartMap.containsKey(name)) {
-            cartMap.put(name, cartMap.get(name) + 1);
+    }
+
+
+    public static void addElementToCart(String nameWithPrice, Integer quantity) {
+
+        String nameWithSinglePrice = nameWithPrice;
+        String onlyName = getOnlyName(nameWithPrice);
+        double onlySinglePrice = getOnlySinglePrice(nameWithSinglePrice);
+
+        if (cartFinal.containsKey(onlyName)) {
+
+            Map<Double, Integer> itemData = cartFinal.get(onlyName);
+            int oldQuantity = itemData.get(onlySinglePrice);
+            itemData.put(onlySinglePrice, oldQuantity + quantity);
+            cartValue += onlySinglePrice;
+
         } else {
-            cartMap.put(name, 1);
+
+            Map<Double, Integer> itemData = new HashMap<>();
+            itemData.put(onlySinglePrice, quantity);
+            cartFinal.put(onlyName, itemData);
+            cartValue += onlySinglePrice;
         }
     }
-}
-
-
-    private static String getOnlyNameWithoutPrice(Map.Entry<String, Integer> entry) {
-
-        String initialNameOfObject = entry.getKey();
-        int lengthOfObjectName = initialNameOfObject.length();
-        int indexOfSymbol = initialNameOfObject.lastIndexOf("-");
-        String finalName = initialNameOfObject.substring(0,indexOfSymbol-1);
-
-        return  finalName;
-
-    }
-
-
-    private static double getPositionSummarizePrice(String itemNameWithPrice, Map.Entry<String, Integer> entry) {
-
-        int length = itemNameWithPrice.length();
-        int indexOfSymbol = itemNameWithPrice.lastIndexOf("-");
-        String priceAsString = itemNameWithPrice.substring(indexOfSymbol+2, length-3);
-        double summarizePriceOfPosition = Double.parseDouble(priceAsString.replace(',','.'));
-        summarizePriceOfPosition = (entry.getValue()*summarizePriceOfPosition);
-
-        return summarizePriceOfPosition;
-
-    }
-
 
     public static void printCartList() {
 
-        int i = 1;
-        String itemNameWithPrice = "";
-        String itemNameWithoutPrice = "";
-        double cartPositionFullPrice = 0;
+        int enumeration = 1;
 
         System.out.println("\nElements in your Cart:");
 
-        for (Map.Entry<String, Integer> entry : cartMap.entrySet()) {
+        for (String itemName : cartFinal.keySet()) {
 
-            itemNameWithPrice = entry.getKey();
-            itemNameWithoutPrice = getOnlyNameWithoutPrice(entry);
-            cartPositionFullPrice = getPositionSummarizePrice(itemNameWithPrice, entry);
+            Map<Double, Integer> itemDetails = cartFinal.get(itemName);
 
-            //Printing cartList with summarize prices
-            System.out.print(i + ". ");
-            System.out.println(entry.getValue() + " x " + itemNameWithoutPrice + " - " + String.format("%.2f", cartPositionFullPrice) + " PLN");
-            i++;
-
-            //Create arrayListView
-            arrayListViewOfProductsInCart.add(itemNameWithPrice);
+            for (Double singlePrice : itemDetails.keySet()) {
+                int quantity = itemDetails.get(singlePrice);
+                System.out.println(enumeration + ". " + quantity + " x " + itemName + " - " + String.format("%.2f",(quantity * singlePrice)) + " PLN");
+                enumeration++;
+            }
         }
-        System.out.printf("\nTotal sum of your Cart is: %.2f PLN", CartList.getCartValue());
-        System.out.println("\n");
-        cartCustomizationMethod();
+
+        System.out.printf("\nTotal sum of your Cart is: %.2f PLN\n\n", CartList.getCartValue());
+
     }
+
+
+
     public static void cartCustomizationMethod() {
 
         System.out.println("Do you want to customize your cart? Y/N");
@@ -86,13 +70,14 @@ public static void changeArrayListToLinkedHashMap() {
         switch(choice) {
 
             case "Y":
-                selectPositionToCustomize();
+                System.out.println("\nAvailable options:\n\nA - Add new item\nD - Delete position\nQ - Quantity change\nP - Personalize\nF - Finalize order\n");
+                availableCustomizationOptions();
                 break;
 
 
             case "N":
-                //final finalization method // settlment method
-                break;
+                 Finalization.orderSettlement();
+                 break;
 
             default:
                 System.out.println("Please try again...");
@@ -101,46 +86,33 @@ public static void changeArrayListToLinkedHashMap() {
         }
     }
 
-    private static String getOnlyNameWithoutPrice(int index) {
 
-        String selectedName = arrayListViewOfProductsInCart.get(index);
+    public static String getSelectedPosition() {
 
-        return selectedName;
-
-    }
-
-    private static double getPriceOfSelectedItem(String objectNameSelected) {
-
-        int indexOfSymbol = objectNameSelected.lastIndexOf("-");
-        int objectNameLength = objectNameSelected.length();
-        String priceAsString = objectNameSelected.substring(indexOfSymbol + 2, objectNameLength - 3);
-        double priceOfElementChosen = Double.parseDouble(priceAsString.replace(',', '.'));
-
-        return priceOfElementChosen;
-    }
-
-
-
-    private static void selectPositionToCustomize() {
-
-        int sizeOfView = arrayListViewOfProductsInCart.size();
+        int currentPosition = 0;
+        int sizeOfCart = cartFinal.size();
+        String selectedKey = null;
 
         System.out.println("Select position you want to customize: ");
 
-        int indexOfElementName = getValidNumber.getValidNumberMain(MyScanner.getNewInstance(), sizeOfView) - 1;
+        int selectedPosition = getValidNumber.getValidNumberMain(MyScanner.getNewInstance(), sizeOfCart);
 
-        String objectNameSelected = getOnlyNameWithoutPrice(indexOfElementName);
-        double priceOfElementChosen = getPriceOfSelectedItem(objectNameSelected);
+        for (String key : cartFinal.keySet()) {
+            if (currentPosition == selectedPosition - 1) { // account for 0-based indexing
+                selectedKey = key;
+                break;
+            }
+            currentPosition++;
+        }
 
-
-//        int currentQuantityOfSelectedItem = cartMap.get(objectNameSelected);
-        System.out.println("\nAvailable options:\n\nD - Delete position\nQ - Quantity change\nP - Personalize\nF - Finalize order\n");
-        availableCustomizationOptions(objectNameSelected, priceOfElementChosen, indexOfElementName);
+        return selectedKey;
 
     }
 
-        private static void availableCustomizationOptions(String objectNameSelected, double priceOfElementChosen, int indexOfElementName ){
 
+    private static void availableCustomizationOptions(){
+
+        String selectedPositionOfOuterMapKey = "";
 
         System.out.print("Enter choice: ");
         String choice = MyScanner.getNewInstance().nextLine();
@@ -155,83 +127,127 @@ public static void changeArrayListToLinkedHashMap() {
 
             case "D":
                 //delete position from cart
-                removePositionFromBasket(cartMap,objectNameSelected, priceOfElementChosen, indexOfElementName);
-                printCartList();
+                selectedPositionOfOuterMapKey = getSelectedPosition();
+                removePositionFromBasket(cartFinal, selectedPositionOfOuterMapKey);
+                Finalization.finalizationOfOrder();
                 break;
 
             case "Q":
                 //change quantity of selected item
-                changeQuantityMethod(objectNameSelected, priceOfElementChosen);
+                selectedPositionOfOuterMapKey = getSelectedPosition();
+                changeQuantityMethod(selectedPositionOfOuterMapKey);
+                Finalization.finalizationOfOrder();
                 break;
 
             case "P":
+                ///
+                ///implement method of personalization.
 
                 break;
 
             case "F":
-
+                Finalization.orderSettlement();
                 break;
 
 
             default:
                 System.out.println("Please try again...");
-                availableCustomizationOptions(objectNameSelected,priceOfElementChosen, indexOfElementName);
+                availableCustomizationOptions();
                 break;
 
         }
     }
 
-    //CASE Q
-    public static void changeQuantityMethod(String nameOfElementChosen, double priceOfElementChosen) {
 
-        System.out.print("Enter quantity: ");
+    public static void changeQuantityMethod(String positionKey) {
+
+        System.out.print("\nEnter quantity: ");
         int desiredQuantity = MyScanner.getNewInstance().nextInt();
 
         if(desiredQuantity < 1 || desiredQuantity > 12) {
             System.out.println("\nQuantity cannot be below 1 or greater than 12");
-            changeQuantityMethod(nameOfElementChosen, priceOfElementChosen);
+            changeQuantityMethod(positionKey);
 
         } else {
-            modifyBasketItem(cartMap,nameOfElementChosen, desiredQuantity, priceOfElementChosen);
+            modifyBasketItem(positionKey, desiredQuantity);
             printCartList();
         }
     }
 
-    private static void modifyBasketItem(Map<String, Integer> basket, String key, int desiredQuantity, double priceOfChosenElement) {
+    private static void modifyBasketItem(String positionKey, int desiredQuantity) {
 
-        if (basket.containsKey(key)) {
-            Integer quantityOfItemInCart = basket.get(key);
+        Double selectedKey = 0.00;
+        Integer currentQuantity = 0;
+        int difference = 0;
 
-            if (desiredQuantity > quantityOfItemInCart) {
-                int difference = desiredQuantity - quantityOfItemInCart;
-                basket.put(key, quantityOfItemInCart + difference);
-                cartValue += (difference * priceOfChosenElement);
 
-            } else if (desiredQuantity == quantityOfItemInCart) {
+        if (cartFinal.containsKey(positionKey)) {
+
+            Map<Double, Integer> actualPositionDetails = cartFinal.get(positionKey);
+
+            for (Double key : actualPositionDetails.keySet()) {
+                selectedKey = key;
+                currentQuantity = actualPositionDetails.get(selectedKey);
+                break;
+            }
+
+            difference = Math.abs(desiredQuantity - currentQuantity);
+
+            if (desiredQuantity > currentQuantity) {
+
+                actualPositionDetails.put(selectedKey, currentQuantity + difference);
+                cartValue += (difference * selectedKey);
+
+            }  else if (desiredQuantity == currentQuantity) {
                 ////empty - do nothing
             } else {
-                int difference = quantityOfItemInCart - desiredQuantity;
-                basket.put(key, quantityOfItemInCart - difference);
-                cartValue -= (difference * priceOfChosenElement);
+                actualPositionDetails.put(selectedKey, currentQuantity - difference);
+                cartValue -= (difference * selectedKey);
+
             }
         }
     }
 
-     ////D CASE
-    private static void removePositionFromBasket(Map<String, Integer> cartMap, String key, double priceOfElementChosen, int indexOfPositionChosen) {
 
-        if (cartMap.containsKey(key)) {
+    private static void removePositionFromBasket(Map<String,Map<Double,Integer>> cartFinal, String keyOfElementSelected) {
 
-            //decrease cartValue
-            Integer quantityOfPosition = cartMap.get(key);
-            double finalPrice = quantityOfPosition*priceOfElementChosen;
+        Double selectedKey = 0.00;
+        Integer currentQuantity = 0;
 
-            cartValue -= finalPrice;
+        if (cartFinal.containsKey(keyOfElementSelected)) {
 
-            // remove from cart
-            arrayListViewOfProductsInCart.remove(indexOfPositionChosen);
-            cartMap.remove(key);
+            Map<Double, Integer> actualPositionDetails = cartFinal.get(keyOfElementSelected);
+
+            for (Double key : actualPositionDetails.keySet()) {
+                selectedKey = key;
+                currentQuantity = actualPositionDetails.get(selectedKey);
+                break;
+            }
         }
+        cartValue -= currentQuantity*selectedKey;
+        cartFinal.remove(keyOfElementSelected);
+    }
+
+
+    private static String getOnlyName(String nameWithPrice) {
+
+        int indexOfSymbol = nameWithPrice.lastIndexOf("-");
+        String singleName = nameWithPrice.substring(0,indexOfSymbol-1);
+
+        return  singleName;
+
+
+    }
+
+    private static double getOnlySinglePrice(String nameWithPrice) {
+
+
+        int length = nameWithPrice.length();
+        int indexOfSymbol = nameWithPrice.lastIndexOf("-");
+        String priceAsString = nameWithPrice.substring(indexOfSymbol+2, length-3);
+        double singlePrice = Double.parseDouble(priceAsString.replace(',','.'));
+
+        return  singlePrice;
     }
 
 
@@ -241,28 +257,10 @@ public static void changeArrayListToLinkedHashMap() {
        cartValue += price;
     }
 
-    public static void addToCart(Object o, double price) {
-        cartList.add(o);
-        cartValue += price;
-    }
-
 
     public static  double getCartValue() {
         return cartValue;
     }
-
-    public static ArrayList getCartList () {
-        return cartList;
-    }
-
-    public static void addToCartList(Object o) {
-
-        cartList.add(o);
-    }
-
-
-
-
 
 
 }

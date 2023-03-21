@@ -1,11 +1,13 @@
 package AddToCart;
 
+import Customization.BurgerCustomization;
 import Customization.CoffeesCustomization;
 import Finalization.CartList;
 import Finalization.Finalization;
 import Interfaces.MyScanner;
 import Interfaces.getValidNumber;
 import OperatingSystem.SystemStart;
+import Products.Burger;
 import Products.Coffees;
 
 public class AddCoffeesToCart {
@@ -21,17 +23,13 @@ public class AddCoffeesToCart {
         else {
             Coffees selectedCoffee = Coffees.getCoffeesList().get(choice);
             double price = Coffees.getCoffeesList().get(choice).getPrice();
-            addSelectedCoffeeToCart(selectedCoffee, price);
+            String nameWithPrice = selectedCoffee.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
             System.out.printf("\n%.2f PLN added to bill.\n", price);
             CoffeesCustomization.coffeesCustomization();
         }
     }
 
-    static void addSelectedCoffeeToCart(Coffees coffee, double price) {
-
-        CartList.addToCartList(coffee);
-        CartList.addToCartValue(price);
-    }
 
 
 }

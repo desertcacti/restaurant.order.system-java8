@@ -83,7 +83,7 @@ public class SystemStart implements getValidNumber {
 
                 case 11:
                     SpecialOffers.specialOffersStart();
-//                    SpecialOffers.displaySpecialOffersList();
+
                     break;
 
                 case 12:

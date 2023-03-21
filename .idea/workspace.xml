@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Modify Cart display part2.">
+    <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Modify Cart managing methods.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddBurgerToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddBurgerToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddCoffeesToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddCoffeesToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddDessertsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddDessertsToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddDrinksToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddDrinksToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddExtrasToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddExtrasToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddFriesToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddFriesToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddNuggetsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddNuggetsToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddWrapToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddWrapToCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Finalization/CartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finalization/CartList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Finalization/Finalization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finalization/Finalization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/getValidNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/getValidNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OperatingSystem/SystemStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OperatingSystem/SystemStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sets/Sets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sets/Sets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecialOffers/SpecialOffers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialOffers/SpecialOffers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Two4You/Two4You.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Two4You/Two4You.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678977588146</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Modify Cart managing methods.">
+      <created>1679180817257</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1679180817257</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,7 +336,8 @@
     <MESSAGE value="Modify Cart display" />
     <MESSAGE value="Amend" />
     <MESSAGE value="Modify Cart display part2." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify Cart display part2." />
+    <MESSAGE value="Modify Cart managing methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify Cart managing methods." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

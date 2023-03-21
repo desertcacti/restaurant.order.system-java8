@@ -20,18 +20,11 @@ public class AddFriesToCart {
         else {
             Fries selectedFries = Fries.getFriesList().get(choice);
             double price = Fries.getFriesList().get(choice).getPrice();
-            addSelectedFriesToCart(selectedFries, price);
+            String nameWithPrice = selectedFries.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
             System.out.printf("\n%.2f PLN added to bill.\n", price);
             addFriesToCart();
         }
     }
-
-    static void addSelectedFriesToCart(Fries selectedFries, double price) {
-
-        CartList.addToCartList(selectedFries);
-        CartList.addToCartValue(price);
-    }
-
-
 }
 

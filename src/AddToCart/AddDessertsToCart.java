@@ -1,11 +1,13 @@
 package AddToCart;
 
+import Customization.CoffeesCustomization;
 import Customization.DessertsCustomization;
 import Finalization.CartList;
 import Finalization.Finalization;
 import Interfaces.MyScanner;
 import Interfaces.getValidNumber;
 import OperatingSystem.SystemStart;
+import Products.Coffees;
 import Products.Desserts;
 
 public class AddDessertsToCart {
@@ -57,16 +59,12 @@ public class AddDessertsToCart {
         else {
             Desserts selectedDessert = Desserts.getDessertsList().get(choice);
             double price = Desserts.getDessertsList().get(choice).getPrice();
-            addSelectedDessertToCart(selectedDessert, price);
+            String nameWithPrice = selectedDessert.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
             System.out.printf("\n%.2f PLN added to bill.\n", price);
             addDessertsToCart();
+
         }
-    }
-
-    static void addSelectedDessertToCart(Desserts selectedDessert, double price) {
-
-        CartList.addToCartList(selectedDessert);
-        CartList.addToCartValue(price);
     }
 
 
@@ -85,9 +83,12 @@ public class AddDessertsToCart {
         else {
             Desserts selectedIceCream = Desserts.getIceCreamsList().get(choice);
             double price = Desserts.getIceCreamsList().get(choice).getPrice();
-            addSelectedDessertToCart(selectedIceCream, price);
+            String nameWithPrice = selectedIceCream.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
             System.out.printf("\n%.2f PLN added to bill.\n", price);
             DessertsCustomization.iceCreamCustomization();
+
+
         }
     }
 
@@ -105,9 +106,12 @@ public class AddDessertsToCart {
         else {
             Desserts selectedMcFlurry = Desserts.getMcFlurryList().get(choice);
             double price = Desserts.getMcFlurryList().get(choice).getPrice();
-            addSelectedDessertToCart(selectedMcFlurry, price);
+            String nameWithPrice = selectedMcFlurry.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
             System.out.printf("\n%.2f PLN added to bill.\n", price);
             DessertsCustomization.mcFlurryCustomization();
+
+
         }
     }
 

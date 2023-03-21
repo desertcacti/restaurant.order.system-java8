@@ -20,17 +20,10 @@ public class AddNuggetsToCart {
         else {
             Nuggets selectedNuggets = Nuggets.getNuggetsList().get(choice);
             double price = Nuggets.getNuggetsList().get(choice).getPrice();
-            addSelectedNuggetsToCart(selectedNuggets, price);
+            String nameWithPrice = selectedNuggets.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
             System.out.printf("\n%.2f PLN added to bill.\n", price);
             addNuggetsToCart();
         }
     }
-
-    static void addSelectedNuggetsToCart(Nuggets selectedNuggets, double price) {
-
-        CartList.addToCartList(selectedNuggets);
-        CartList.addToCartValue(price);
-    }
-
-
 }

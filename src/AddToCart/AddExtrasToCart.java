@@ -20,18 +20,11 @@ public class AddExtrasToCart {
         else {
             Extras selectedExtras = Extras.getExtrasList().get(choice);
             double price = Extras.getExtrasList().get(choice).getPrice();
-            addSelectedExtrasToCart(selectedExtras, price);
+            String nameWithPrice = selectedExtras.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
             System.out.printf("\n%.2f PLN added to bill.\n", price);
             addExtrasToCart();
         }
     }
-
-    static void addSelectedExtrasToCart(Extras selectedExtras, double price) {
-
-        CartList.addToCartList(selectedExtras);
-        CartList.addToCartValue(price);
-    }
-
-
 }
 

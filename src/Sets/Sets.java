@@ -258,7 +258,7 @@ public class Sets {
                 break;
 
             case "N":
-                addToCartList(newSet, priceOfPreSet);
+                CartList.addElementToCart(fullSetName, 1);
                 System.out.printf("\n%.2f PLN added to bill.\n", priceOfPreSet);
                 priceOfPreSet = 00.00;
                 setsStart();
@@ -267,10 +267,10 @@ public class Sets {
     }
 
 
-    private static void addToCartList(Sets set, double price) {
-        CartList.addToCartList(set);
-        CartList.addToCartValue(price);
-    }
+//    private static void addToCartList(Sets set, double price) {
+//        CartList.addToCartList(set);
+//        CartList.addToCartValue(price);
+//    }
 
     //DISPLAYS METHODS:
 

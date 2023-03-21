@@ -22,19 +22,12 @@ public class AddWrapToCart {
         else {
             Wraps selectedWraps = Wraps.getWrapsList().get(choice);
             double price = Wraps.getWrapsList().get(choice).getPrice();
-            addSelectedWrapsToCart(selectedWraps, price);
+            String nameWithPrice = selectedWraps.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
             System.out.printf("\n%.2f PLN added to bill.\n", price);
             WrapsCustomization.wrapsCustomization();
         }
     }
-
-    static void addSelectedWrapsToCart(Wraps selectedWraps, double price) {
-
-        CartList.addToCartList(selectedWraps);
-        CartList.addToCartValue(price);
-    }
-
-
 }
 
 

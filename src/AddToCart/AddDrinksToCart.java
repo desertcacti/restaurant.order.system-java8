@@ -21,18 +21,11 @@ public class AddDrinksToCart {
        else {
            Drinks selectedDrink = Drinks.getDrinksList().get(choice);
            double price = Drinks.getDrinksList().get(choice).getPrice();
-           addSelectedDrinkToCart(selectedDrink, price);
+           String nameWithPrice = selectedDrink.toString();
+           CartList.addElementToCart(nameWithPrice, 1);
            System.out.printf("\n%.2f PLN added to bill.\n", price);
            DrinksCustomization.drinksCustomization();
         }
-    }
-
-    private static void addSelectedDrinkToCart(Drinks drink, double price) {
-
-       CartList.addToCartList(drink);
-       CartList.addToCartValue(price);
-
-
     }
 }
 

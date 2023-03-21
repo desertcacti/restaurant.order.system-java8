@@ -155,7 +155,8 @@ public class SpecialOffers {
             case 0,1,2,3,4,5,6,7:
                 SpecialOffers specialOffersChosen = getSpecialOffersList().get(choice);
                 double selectedItemPrice = specialOffersChosen.getPrice();
-                CartList.addToCart(specialOffersChosen, selectedItemPrice);
+                String nameWithPrice = specialOffersChosen.toString();
+                CartList.addElementToCart(nameWithPrice, 1);
                 System.out.printf("\n%.2f PLN added to bill.\n", selectedItemPrice);
                 finalizationOfSpecialOffers();
                 break;
