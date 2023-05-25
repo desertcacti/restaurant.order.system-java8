@@ -152,7 +152,7 @@ public class SpecialOffers {
 
         switch(choice) {
 
-            case 0,1,2,3,4,5,6,7:
+            default:
                 SpecialOffers specialOffersChosen = getSpecialOffersList().get(choice);
                 double selectedItemPrice = specialOffersChosen.getPrice();
                 String nameWithPrice = specialOffersChosen.toString();
