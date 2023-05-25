@@ -1,5 +1,5 @@
 package OperatingSystem;
-import AddToCart.*;
+
 import Finalization.Finalization;
 import Interfaces.Farewell;
 import Interfaces.MyScanner;
@@ -26,47 +26,47 @@ public class SystemStart implements getValidNumber {
 
                 case 1:
                     Burger.displayBurgerMenu();
-                    AddBurgerToCart.addBurgerToCart();
+                    Burger.addBurgerToCart();
 
                     break;
 
                 case 2:
                     Wraps.displayWrapsMenu();
-                    AddWrapToCart.addWrapToCart();
+                    Wraps.addWrapToCart();
 
                     break;
 
                 case 3:
                     Fries.displayFriesMenu();
-                    AddFriesToCart.addFriesToCart();
+                    Fries.addFriesToCart();
 
                     break;
 
                 case 4:
                     Nuggets.displayNuggetsMenu();
-                    AddNuggetsToCart.addNuggetsToCart();
+                    Nuggets.addNuggetsToCart();
                     break;
 
                 case 5:
                     Drinks.displayDrinksMenu();
-                    AddDrinksToCart.addDrinksToCart();
+                    Drinks.addDrinksToCart();
 
                     break;
 
                 case 6:
                     Coffees.displayCoffeesMenu();
-                    AddCoffeesToCart.addCoffeesToCart();
+                    Coffees.addCoffeesToCart();
 
                     break;
 
                 case 7:
                     Desserts.displayPreDessertMenu();
-                    AddDessertsToCart.displayDessertsMainMenu();
+                    Desserts.displayDessertsMainMenu();
                     break;
 
                 case 8:
                     Extras.displayExtrasMenu();
-                    AddExtrasToCart.addExtrasToCart();
+                    Extras.addExtrasToCart();
 
                     break;
 

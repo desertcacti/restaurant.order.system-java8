@@ -1,9 +1,17 @@
 package Products;
 
+import Finalization.Finalization;
 import Interfaces.MyPrinter;
+import Interfaces.MyScanner;
+import Interfaces.getValidNumber;
+import OperatingSystem.SystemStart;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import Finalization.CartList;
+
+
+
 
 public class Extras {
     private String name;
@@ -31,14 +39,7 @@ public class Extras {
     public double getPrice() {
         return price;
     }
-    @Override
-    public String toString() {
-        return name +
-                " - " +
-                String.format("%.2f", price)
-                + " PLN"
-                ;
-    }
+
 
 
     public static void displayExtrasMenu() {
@@ -54,7 +55,33 @@ public class Extras {
     }
 
 
+    public static void addExtrasToCart() {
 
+        int sizeOfExtrasMenu = Extras.getExtrasList().size()+2;
+        //adding 2 to listSize - finalization option and back option.
+        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "extras", sizeOfExtrasMenu)-1;
+
+        if (choice == 10) { SystemStart.Start(); }
+        else if (choice == 11) { Finalization.finalizationOfOrder(); }
+
+        else {
+            Extras selectedExtras = Extras.getExtrasList().get(choice);
+            double price = Extras.getExtrasList().get(choice).getPrice();
+            String nameWithPrice = selectedExtras.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
+            System.out.printf("\n%.2f PLN added to bill.\n", price);
+            addExtrasToCart();
+        }
+    }
+
+    @Override
+    public String toString() {
+        return name +
+                " - " +
+                String.format("%.2f", price)
+                + " PLN"
+                ;
+    }
 
 
 }

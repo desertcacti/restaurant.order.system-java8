@@ -1,7 +1,6 @@
 package Customization;
 
 import Finalization.CartList;
-import AddToCart.AddDessertsToCart;
 import Interfaces.MyScanner;
 import Interfaces.getValidNumber;
 import Products.Desserts;
@@ -27,7 +26,7 @@ public class DessertsCustomization {
 
 
             case "N":
-                AddDessertsToCart.addIceCreamsToCart();
+                Desserts.addIceCreamsToCart();
                 break;
 
             default:
@@ -62,7 +61,7 @@ public class DessertsCustomization {
                 case 2:
                     setFlagsOnNull();
                     Desserts.displayIceCreamMenu();
-                    AddDessertsToCart.addIceCreamsToCart();
+                    Desserts.addIceCreamsToCart();
                     break;
 
 
@@ -83,7 +82,7 @@ public class DessertsCustomization {
 
 
             case "N":
-                AddDessertsToCart.addMcFlurryToCart();
+                Desserts.addMcFlurryToCart();
                 break;
 
             default:
@@ -133,7 +132,7 @@ public class DessertsCustomization {
                 case 3:
                     setFlagsOnNull();
                     Desserts.displayMcFlurryMenu();
-                    AddDessertsToCart.addMcFlurryToCart();
+                    Desserts.addMcFlurryToCart();
                     break;
 
 

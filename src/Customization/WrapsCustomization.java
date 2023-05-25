@@ -1,7 +1,6 @@
 package Customization;
 
 import Finalization.CartList;
-import AddToCart.AddWrapToCart;
 import Interfaces.MyScanner;
 import Interfaces.getValidNumber;
 import Products.Wraps;
@@ -29,7 +28,7 @@ public class WrapsCustomization {
 
 
             case "N":
-                AddWrapToCart.addWrapToCart();
+                Wraps.addWrapToCart();
                 break;
 
             default:
@@ -141,7 +140,7 @@ public class WrapsCustomization {
                 case 7:
                     setFlagsOnNull();
                     Wraps.displayWrapsMenu();
-                    AddWrapToCart.addWrapToCart();
+                    Wraps.addWrapToCart();
                     break;
 
 

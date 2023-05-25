@@ -1,10 +1,14 @@
 package Products;
 
+import Finalization.Finalization;
 import Interfaces.MyPrinter;
+import Interfaces.MyScanner;
+import Interfaces.getValidNumber;
+import OperatingSystem.SystemStart;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
+import Finalization.CartList;
 public class Fries{
     private String name;
     private double price;
@@ -26,6 +30,39 @@ public class Fries{
         return price;
     }
 
+    public static void displayFriesMenu() {
+
+        System.out.println("\nFries menu:\n");
+        MyPrinter.productListPrinter(friesList);
+        System.out.println("\n5.Back");
+        System.out.println("6.Finalize order\n");
+    }
+
+
+
+    public static ArrayList<Fries> getFriesList() {
+        return friesList;
+    }
+
+    public static void addFriesToCart() {
+
+        int sizeOfFriesMenu = Fries.getFriesList().size()+2;
+        //adding 2 to listSize - finalization option and back option.
+        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "fries", sizeOfFriesMenu)-1;
+
+        if (choice == 4) { SystemStart.Start(); }
+        else if (choice == 5) { Finalization.finalizationOfOrder(); }
+
+        else {
+            Fries selectedFries = Fries.getFriesList().get(choice);
+            double price = Fries.getFriesList().get(choice).getPrice();
+            String nameWithPrice = selectedFries.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
+            System.out.printf("\n%.2f PLN added to bill.\n", price);
+            addFriesToCart();
+        }
+    }
+
     @Override
     public String toString () {
 
@@ -37,17 +74,7 @@ public class Fries{
     }
 
 
-    public static void displayFriesMenu() {
 
-        System.out.println("\nFries menu:\n");
-        MyPrinter.productListPrinter(friesList);
-        System.out.println("\n5.Back");
-        System.out.println("6.Finalize order\n");
-    }
-
-    public static ArrayList<Fries> getFriesList() {
-        return friesList;
-    }
 
 
 

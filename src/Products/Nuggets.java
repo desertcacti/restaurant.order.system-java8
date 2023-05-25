@@ -1,9 +1,14 @@
 package Products;
 
+import Finalization.Finalization;
 import Interfaces.MyPrinter;
+import Interfaces.MyScanner;
+import Interfaces.getValidNumber;
+import OperatingSystem.SystemStart;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import Finalization.CartList;
 
 public class Nuggets {
     private String name;
@@ -29,17 +34,6 @@ public class Nuggets {
         return price;
     }
 
-    @Override
-    public String toString () {
-        return name +
-                " - " +
-                String.format("%.2f", price)
-                + " PLN"
-                ;
-
-
-    }
-
     public static void displayNuggetsMenu() {
 
         System.out.println("\nNuggets menu:\n");
@@ -53,6 +47,35 @@ public class Nuggets {
     }
 
 
+    public static void addNuggetsToCart() {
+
+        int sizeOfNuggetsMenu = Nuggets.getNuggetsList().size()+2;
+        //adding 2 to listSize - finalization option and back option.
+        int choice = getValidNumber.getValidNumberAddToCart(MyScanner.getNewInstance(), "nuggets", sizeOfNuggetsMenu)-1;
+
+        if (choice == 6) { SystemStart.Start(); }
+        else if (choice == 7) { Finalization.finalizationOfOrder(); }
+
+        else {
+            Nuggets selectedNuggets = Nuggets.getNuggetsList().get(choice);
+            double price = Nuggets.getNuggetsList().get(choice).getPrice();
+            String nameWithPrice = selectedNuggets.toString();
+            CartList.addElementToCart(nameWithPrice, 1);
+            System.out.printf("\n%.2f PLN added to bill.\n", price);
+            addNuggetsToCart();
+        }
+    }
+
+    @Override
+    public String toString () {
+        return name +
+                " - " +
+                String.format("%.2f", price)
+                + " PLN"
+                ;
+
+
+    }
 
 
 

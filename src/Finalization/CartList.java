@@ -2,30 +2,27 @@ package Finalization;
 import Interfaces.MyScanner;
 import Interfaces.getValidNumber;
 import OperatingSystem.SystemStart;
-
-import java.sql.SQLOutput;
 import java.util.*;
 public class CartList {
 
     private static double cartValue = 0.00;
-    private static Map<String, Map<Double, Integer>> cartFinal = new LinkedHashMap<>();
+    private static Map<String, Map<Double, Integer>> cartList = new LinkedHashMap<>();
+
+
 
     public static Map getCartList () {
 
-        return cartFinal;
-
+        return cartList;
     }
-
-
     public static void addElementToCart(String nameWithPrice, Integer quantity) {
 
         String nameWithSinglePrice = nameWithPrice;
         String onlyName = getOnlyName(nameWithPrice);
         double onlySinglePrice = getOnlySinglePrice(nameWithSinglePrice);
 
-        if (cartFinal.containsKey(onlyName)) {
+        if (cartList.containsKey(onlyName)) {
 
-            Map<Double, Integer> itemData = cartFinal.get(onlyName);
+            Map<Double, Integer> itemData = cartList.get(onlyName);
             int oldQuantity = itemData.get(onlySinglePrice);
             itemData.put(onlySinglePrice, oldQuantity + quantity);
             cartValue += onlySinglePrice;
@@ -34,7 +31,7 @@ public class CartList {
 
             Map<Double, Integer> itemData = new HashMap<>();
             itemData.put(onlySinglePrice, quantity);
-            cartFinal.put(onlyName, itemData);
+            cartList.put(onlyName, itemData);
             cartValue += onlySinglePrice;
         }
     }
@@ -45,9 +42,9 @@ public class CartList {
 
         System.out.println("\nElements in your Cart:");
 
-        for (String itemName : cartFinal.keySet()) {
+        for (String itemName : cartList.keySet()) {
 
-            Map<Double, Integer> itemDetails = cartFinal.get(itemName);
+            Map<Double, Integer> itemDetails = cartList.get(itemName);
 
             for (Double singlePrice : itemDetails.keySet()) {
                 int quantity = itemDetails.get(singlePrice);
@@ -60,7 +57,7 @@ public class CartList {
 
     }
 
-//before push
+
 
     public static void cartCustomizationMethod() {
 
@@ -90,14 +87,14 @@ public class CartList {
     public static String getSelectedPosition() {
 
         int currentPosition = 0;
-        int sizeOfCart = cartFinal.size();
+        int sizeOfCart = cartList.size();
         String selectedKey = null;
 
         System.out.println("Select position you want to customize: ");
 
         int selectedPosition = getValidNumber.getValidNumberMain(MyScanner.getNewInstance(), sizeOfCart);
 
-        for (String key : cartFinal.keySet()) {
+        for (String key : cartList.keySet()) {
             if (currentPosition == selectedPosition - 1) { // account for 0-based indexing
                 selectedKey = key;
                 break;
@@ -128,7 +125,7 @@ public class CartList {
             case "D":
                 //delete position from cart
                 selectedPositionOfOuterMapKey = getSelectedPosition();
-                removePositionFromBasket(cartFinal, selectedPositionOfOuterMapKey);
+                removePositionFromBasket(cartList, selectedPositionOfOuterMapKey);
                 Finalization.finalizationOfOrder();
                 break;
 
@@ -181,9 +178,9 @@ public class CartList {
         int difference = 0;
 
 
-        if (cartFinal.containsKey(positionKey)) {
+        if (cartList.containsKey(positionKey)) {
 
-            Map<Double, Integer> actualPositionDetails = cartFinal.get(positionKey);
+            Map<Double, Integer> actualPositionDetails = cartList.get(positionKey);
 
             for (Double key : actualPositionDetails.keySet()) {
                 selectedKey = key;

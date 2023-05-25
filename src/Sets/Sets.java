@@ -238,6 +238,9 @@ public class Sets {
     private static void setsFinalization(String firstItemName, String secondItemName, String drinkName, Scanner sc, boolean isExtraValue) {
 
         String fullSetName =  firstItemName + " + " + secondItemName + " + " + drinkName;
+        String nameWithPrice;
+
+        //AKTUALNie tutaj
 
         if(isExtraValue == false) {
             priceOfPreSet = priceOfPreSet * 0.7;
@@ -247,6 +250,8 @@ public class Sets {
         }
 
         Sets newSet = new Sets(fullSetName, priceOfPreSet);
+        nameWithPrice = newSet.toString();
+
         System.out.println("\nYour set includes: \n" + newSet + "\n\nDo you want to change your set components? Y/N");
         String choice = sc.nextLine();
 
@@ -258,7 +263,7 @@ public class Sets {
                 break;
 
             case "N":
-                CartList.addElementToCart(fullSetName, 1);
+                CartList.addElementToCart(nameWithPrice, 1);
                 System.out.printf("\n%.2f PLN added to bill.\n", priceOfPreSet);
                 priceOfPreSet = 00.00;
                 setsStart();
@@ -267,10 +272,6 @@ public class Sets {
     }
 
 
-//    private static void addToCartList(Sets set, double price) {
-//        CartList.addToCartList(set);
-//        CartList.addToCartValue(price);
-//    }
 
     //DISPLAYS METHODS:
 

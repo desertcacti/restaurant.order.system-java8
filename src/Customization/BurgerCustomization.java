@@ -1,13 +1,11 @@
 package Customization;
 
 import Finalization.CartList;
-import AddToCart.AddBurgerToCart;
 import Interfaces.MyScanner;
 import Interfaces.getValidNumber;
 import Products.Burger;
 
 public class BurgerCustomization implements getValidNumber {
-
     static int flag1 = 0;
     static int flag2 = 0;
     static int flag3 = 0;
@@ -30,7 +28,7 @@ public class BurgerCustomization implements getValidNumber {
 
 
             case "N":
-                AddBurgerToCart.addBurgerToCart();
+                Burger.addBurgerToCart();
                 break;
 
             default:
@@ -139,7 +137,7 @@ public class BurgerCustomization implements getValidNumber {
                 case 7:
                     setFlagsOnNull();
                     Burger.displayBurgerMenu();
-                    AddBurgerToCart.addBurgerToCart();
+                    Burger.addBurgerToCart();
                     break;
 
             }

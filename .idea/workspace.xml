@@ -3,21 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="a50977d0-7fba-4514-8728-390e15e97803" name="Changes" comment="Modify Cart managing methods.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddBurgerToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddBurgerToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddCoffeesToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddCoffeesToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddDessertsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddDessertsToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddDrinksToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddDrinksToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddExtrasToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddExtrasToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddFriesToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddFriesToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddNuggetsToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddNuggetsToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddWrapToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddToCart/AddWrapToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddBurgerToCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddCoffeesToCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddDessertsToCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddDrinksToCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddExtrasToCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddFriesToCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddNuggetsToCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddToCart/AddWrapToCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customization/BurgerCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/BurgerCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customization/CoffeesCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/CoffeesCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customization/DessertsCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/DessertsCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customization/DrinksCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/DrinksCustomization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customization/WrapsCustomization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customization/WrapsCustomization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Finalization/CartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finalization/CartList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Finalization/Finalization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finalization/Finalization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OperatingSystem/SystemStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OperatingSystem/SystemStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Burger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Coffees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Coffees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Desserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Desserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Drinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Drinks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Extras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Extras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Fries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Fries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Nuggets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Nuggets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Wraps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Wraps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sets/Sets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sets/Sets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SpecialOffers/SpecialOffers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialOffers/SpecialOffers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Two4You/Two4You.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Two4You/Two4You.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,25 +56,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dredz/OneDrive/Pulpit/projekty_nnn/Restaurant_Order_System_v1.1&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowRun.ShowToolbar": "false",
+    "last_opened_file_path": "C:/Users/dredz/OneDrive/Pulpit/projekty_nnn/Restaurant_Order_System_v1.1",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;TEXT&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Test" />
@@ -298,7 +307,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679180817257</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Modify Cart managing methods.">
+      <created>1679436396229</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1679436396229</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Modify Cart managing methods.">
+      <created>1679436550712</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1679436550712</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

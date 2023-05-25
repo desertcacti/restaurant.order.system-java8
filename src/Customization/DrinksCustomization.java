@@ -1,7 +1,6 @@
 package Customization;
 
 import Finalization.CartList;
-import AddToCart.AddDrinksToCart;
 import Interfaces.MyScanner;
 import Interfaces.getValidNumber;
 import Products.Drinks;
@@ -23,7 +22,7 @@ public class DrinksCustomization {
                 break;
 
             case "N":
-                AddDrinksToCart.addDrinksToCart();
+                Drinks.addDrinksToCart();
                 break;
 
             default:
@@ -58,7 +57,7 @@ public class DrinksCustomization {
                 case 2:
                     setFlagsOnNull();
                     Drinks.displayDrinksMenu();
-                    AddDrinksToCart.addDrinksToCart();
+                    Drinks.addDrinksToCart();
                     break;
             }
         }
